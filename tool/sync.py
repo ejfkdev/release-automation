@@ -49,7 +49,7 @@ CHECKSUMS = ROOT / "checksums.toml"
 NPM_DIR = ROOT / "npm"
 WINGET_DIR = ROOT / "winget"
 SCHEMA = 1
-WINGET_MANIFEST_VERSION = "1.6.0"
+WINGET_MANIFEST_VERSION = "1.12.0"
 
 # Canonical target triples used as asset-map keys. They keep the catalog
 # independent of each project's release naming convention.
@@ -662,7 +662,7 @@ def render_winget(program: dict, version: str, record: dict) -> dict[Path, bytes
 
     version_yaml = "\n".join(
         [
-            "# yaml-language-server: $schema=https://aka.ms/winget-manifest.version.1.6.0.schema.json",
+            f"# yaml-language-server: $schema=https://aka.ms/winget-manifest.version.{WINGET_MANIFEST_VERSION}.schema.json",
             f"PackageIdentifier: {yq(identifier)}",
             f"PackageVersion: {yq(version)}",
             "DefaultLocale: en-US",
@@ -673,7 +673,7 @@ def render_winget(program: dict, version: str, record: dict) -> dict[Path, bytes
     )
 
     locale_lines = [
-        "# yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.6.0.schema.json",
+        f"# yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.{WINGET_MANIFEST_VERSION}.schema.json",
         f"PackageIdentifier: {yq(identifier)}",
         f"PackageVersion: {yq(version)}",
         "PackageLocale: en-US",
@@ -752,7 +752,7 @@ def render_winget(program: dict, version: str, record: dict) -> dict[Path, bytes
     installer_type = installer_types.pop()
 
     installer_lines = [
-        "# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.6.0.schema.json",
+        f"# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.{WINGET_MANIFEST_VERSION}.schema.json",
         f"PackageIdentifier: {yq(identifier)}",
         f"PackageVersion: {yq(version)}",
         f"InstallerType: {installer_type}",

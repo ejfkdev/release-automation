@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.6.0.schema.json
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
 PackageIdentifier: ejfkdev.dj
 PackageVersion: 0.6.4
 InstallerType: portable
@@ -13,4 +13,4 @@ Installers:
     InstallerUrl: "https://github.com/ejfkdev/dj/releases/download/v0.6.4/dj-windows-amd64.exe"
     InstallerSha256: A359FBF873F03589B7F478815F6A85094DBB952E024B202E4AEB0C0BFDCE45FF
 ManifestType: installer
-ManifestVersion: 1.6.0
+ManifestVersion: 1.12.0

@@ -6,20 +6,18 @@
     python3 tool/publish.py bundle --program zaip [--out dist]
 
 Without `--yes` npm and WinGet are dry runs: the exact command and payload are
-printed, nothing is sent. WinGet submission runs `wingetcreate submit`, which
-creates the fork branch and the pull request against microsoft/winget-pkgs.
-WinGet payload bundles (multi-command packages) are built deterministically and
-uploaded to the program's GitHub release before the PR is opened.
+printed, nothing is sent. WinGet submission uses the GitHub REST API through `gh`
+(tool/submit_winget.py): it syncs the fork, writes the manifests under
+manifests/, and opens the pull request. WinGet payload bundles (multi-command
+packages) are built deterministically and uploaded to the program's GitHub
+release before the PR is opened.
 """
 
 from __future__ import annotations
 
 import argparse
 import hashlib
-import json
 import os
-import re
-import shutil
 import subprocess
 import sys
 import tempfile
@@ -29,6 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TOOL = Path(__file__).resolve().parent
 sys.path.insert(0, str(TOOL))
 import status  # noqa: E402
+import submit_winget  # noqa: E402
 import sync  # noqa: E402
 
 
@@ -145,134 +144,10 @@ def npm_publish(program: dict, version: str, yes: bool) -> None:
     note(f"{name}: published {package}@{version}")
 
 
-def remote_asset(program: dict, tag: str, name: str) -> dict | None:
-    release = sync.api_json(
-        f"repos/{program['repo']}/releases/tags/{tag}", allow_404=True
-    )
-    if not isinstance(release, dict):
-        die(f"{program['name']}: release {tag} not found")
-    for asset in release.get("assets", []):
-        if asset.get("name") == name:
-            return asset
-    return None
-
-
-def ensure_bundle(program: dict, version: str, record: dict, arch: str) -> None:
-    name = program["name"]
-    if not program.get("winget", {}).get("bundle"):
-        return
-    entry = record["bundles"][arch]
-    tag = record["tag"]
-    data = sync.build_bundle_bytes(program, version, tag, record, arch)
-    digest = hashlib.sha256(data).hexdigest()
-    if digest != entry["sha256"]:
-        die(f"{name}: locally rebuilt {arch} bundle does not match checksums")
-    existing = remote_asset(program, tag, entry["name"])
-    if existing is not None:
-        remote_digest = existing.get("digest")
-        if remote_digest == f"sha256:{digest}" or existing.get("size") == len(data):
-            note(f"{name}: {arch} bundle already uploaded")
-            return
-        note(f"{name}: {arch} bundle exists with a different digest; replacing")
-
-    token = os.environ.get("WINGET_TOKEN") or os.environ.get("GH_TOKEN")
-    if not token:
-        die(f"{name}: WINGET_TOKEN (or GH_TOKEN) is required to upload the bundle")
-    with tempfile.TemporaryDirectory(prefix="winget-bundle-") as tmp:
-        path = Path(tmp) / entry["name"]
-        path.write_bytes(data)
-        env = os.environ.copy()
-        env["GH_TOKEN"] = token
-        result = subprocess.run(
-            [
-                "gh",
-                "release",
-                "upload",
-                tag,
-                str(path),
-                "--repo",
-                program["repo"],
-                "--clobber",
-            ],
-            capture_output=True,
-            text=True,
-            env=env,
-        )
-        if result.returncode != 0:
-            die(
-                f"{name}: failed to upload {entry['name']}: "
-                f"{(result.stderr or result.stdout).strip()}"
-            )
-    note(f"{name}: uploaded {entry['name']}")
-
-
-def winget_publish(program: dict, version: str, yes: bool) -> None:
-    name = program["name"]
-    config = program.get("winget")
-    if not config:
-        note(f"{name}: no winget channel, skipping")
-        return
-    identifier = config["id"]
-    current = status.winget_latest(program)
-    if current == version:
-        note(f"{name}: WinGet already has {identifier} {version}, skipping")
-        return
-    if current and status.version_key(current) > status.version_key(version):
-        die(f"{name}: WinGet has newer {current}; refusing to publish {version}")
-    note(f"{name}: WinGet {current or 'missing'} -> {version}")
-
-    manifest_dir = sync.winget_dir(program, version)
-    if not manifest_dir.is_dir():
-        die(f"{name}: missing {manifest_dir.relative_to(ROOT)} — run sync.py")
-
-    if not yes:
-        bundles = "upload payload bundles and " if config.get("bundle") else ""
-        note(
-            f"dry run — would {bundles}run "
-            f"`wingetcreate submit {manifest_dir.relative_to(ROOT)} --token <PAT>`"
-        )
-        return
-
-    checksums = sync.load_checksums()
-    record = record_for(program, checksums, version)
-    for arch in sync.winget_arch_map(program):
-        ensure_bundle(program, version, record, arch)
-
-    token = os.environ.get("WINGET_TOKEN") or os.environ.get("GH_TOKEN")
-    if not token:
-        die(f"{name}: WINGET_TOKEN (a PAT with public_repo) is required")
-    tool = os.environ.get("WINGETCREATE") or shutil.which("wingetcreate")
-    if tool is None:
-        die(
-            f"{name}: wingetcreate is not available. Set WINGETCREATE to the "
-            f"standalone exe, or install it with `winget install wingetcreate`. "
-            f"Manifest: {manifest_dir.relative_to(ROOT)}"
-        )
-    title = (
-        f"New package: {identifier} version {version}"
-        if current is None
-        else f"Update {identifier} to {version}"
-    )
-    result = subprocess.run(
-        [
-            tool,
-            "submit",
-            "--prtitle",
-            title,
-            "--token",
-            token,
-            "--no-open",
-            str(manifest_dir),
-        ],
-        capture_output=True,
-        text=True,
-    )
-    output = (result.stdout or "") + (result.stderr or "")
-    if output.strip():
-        print(output.strip())
-    if result.returncode != 0:
-        die(f"{name}: wingetcreate submit failed")
-    note(f"{name}: submitted {identifier} {version}")
+def winget_publish(
+    program: dict, version: str, record: dict, yes: bool
+) -> None:
+    submit_winget.submit(program, version, record, yes)
 
 
 def bundle_only(program: dict, version: str, out: Path) -> None:
@@ -323,7 +198,7 @@ def main() -> None:
         if args.channel == "npm":
             npm_publish(program, version, args.yes)
         elif args.channel == "winget":
-            winget_publish(program, version, args.yes)
+            winget_publish(program, version, record, args.yes)
         else:
             bundle_only(program, version, Path(args.out).resolve())
 

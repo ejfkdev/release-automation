@@ -60,9 +60,10 @@ catalog 的完整字段、归档 `member`、多命令 `bundle` 的写法见英�
 | `WINGET_TOKEN` | WinGet 提 PR；classic PAT，至少 `public_repo`。也用于上传多命令 payload 到各项目 release |
 | `GITHUB_TOKEN` | Actions 自动提供；读取公开 release、提交生成物 |
 
-WinGet 使用 `wingetcreate submit`，发布 workflow 在 `windows-latest` 上下载
-standalone exe 后执行。第一次向 WinGet 提交新包时需要在 PR 里回复一次 Microsoft CLA；
-`ejfkdev.ddc` 0.1.33 已经合入，通常说明该账号已签。
+WinGet 通过 `gh` 调 GitHub REST API 直接提交 PR（`tool/submit_winget.py`）：先同步 fork 的
+`master`，从 upstream 建分支，把 3 个 YAML 写到 `manifests/...`，再用 upstream 模板开 PR。
+不需要 Windows runner 或 wingetcreate。第一次提交新包需要签 Microsoft CLA；你的账号已在
+PR #466817 通过 `license/cla`，后续无需重复确认。
 
 ## 已知限制
 

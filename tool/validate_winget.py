@@ -12,15 +12,17 @@ Microsoft's schema files.
 
 from __future__ import annotations
 
+import base64
 import json
 import sys
-import urllib.error
-import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 WINGET = ROOT / "winget"
-MANIFEST_VERSION = "1.6.0"
+MANIFEST_VERSION = "1.12.0"
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import sync  # noqa: E402
 TYPES = ("version", "installer", "defaultLocale")
 
 
@@ -29,20 +31,15 @@ def die(message: str) -> "NoReturn":
     raise SystemExit(1)
 
 
-def fetch(url: str) -> bytes:
-    request = urllib.request.Request(
-        url, headers={"User-Agent": "ejfkdev-release-automation"}
+def fetch_schema(name: str) -> dict:
+    path = (
+        "repos/microsoft/winget-cli/contents/schemas/JSON/manifests/"
+        f"v{MANIFEST_VERSION}/manifest.{name}.{MANIFEST_VERSION}.json"
     )
-    last: Exception | None = None
-    for attempt in range(3):
-        try:
-            with urllib.request.urlopen(request, timeout=60) as response:
-                return response.read()
-        except urllib.error.URLError as exc:
-            last = exc
-            if attempt < 2:
-                continue
-    die(f"cannot fetch {url}: {last}")
+    payload = sync.api_json(path)
+    if not isinstance(payload, dict) or "content" not in payload:
+        die(f"unexpected contents response for {path}")
+    return json.loads(base64.b64decode(payload["content"]))
 
 
 def main() -> None:
@@ -52,12 +49,7 @@ def main() -> None:
     except ImportError as exc:
         die(f"missing dependency: {exc}; install pyyaml and jsonschema")
 
-    schemas = {}
-    for name in TYPES:
-        url = (
-            f"https://aka.ms/winget-manifest.{name}.{MANIFEST_VERSION}.schema.json"
-        )
-        schemas[name] = json.loads(fetch(url))
+    schemas = {name: fetch_schema(name) for name in TYPES}
 
     problems: list[str] = []
     count = 0

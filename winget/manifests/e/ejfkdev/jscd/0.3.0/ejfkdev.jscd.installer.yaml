@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.6.0.schema.json
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
 PackageIdentifier: ejfkdev.jscd
 PackageVersion: 0.3.0
 InstallerType: portable
@@ -13,4 +13,4 @@ Installers:
     InstallerUrl: "https://github.com/ejfkdev/jscd/releases/download/v0.3.0/jscd-v0.3.0-windows-amd64.exe"
     InstallerSha256: 0A6C1A407B247218AC792930CDC3B0108DA0FC794A8EDAAFCB8B4A41F99D4134
 ManifestType: installer
-ManifestVersion: 1.6.0
+ManifestVersion: 1.12.0

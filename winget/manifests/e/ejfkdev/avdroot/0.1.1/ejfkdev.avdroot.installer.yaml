@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.6.0.schema.json
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
 PackageIdentifier: ejfkdev.avdroot
 PackageVersion: 0.1.1
 InstallerType: portable
@@ -13,4 +13,4 @@ Installers:
     InstallerUrl: "https://github.com/ejfkdev/avdroot/releases/download/v0.1.1/avdroot_windows_amd64.exe"
     InstallerSha256: CA86DE1FCB7151C6D9FC7C4AA074235178AA0D232B575846A9D5E932C205466F
 ManifestType: installer
-ManifestVersion: 1.6.0
+ManifestVersion: 1.12.0

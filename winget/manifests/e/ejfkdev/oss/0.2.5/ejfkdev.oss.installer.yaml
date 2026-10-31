@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.6.0.schema.json
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
 PackageIdentifier: ejfkdev.oss
 PackageVersion: 0.2.5
 InstallerType: zip
@@ -12,4 +12,4 @@ Installers:
       - RelativeFilePath: oss-v0.2.5-windows-amd64.exe
         PortableCommandAlias: oss
 ManifestType: installer
-ManifestVersion: 1.6.0
+ManifestVersion: 1.12.0

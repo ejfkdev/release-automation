@@ -202,12 +202,11 @@ the tool only assumes public release assets.
 | `WINGET_TOKEN` | WinGet job | Classic PAT with `public_repo`; used for the fork/PR and for uploading payload bundles to the program release |
 | `GITHUB_TOKEN` | reconcile/plan | Automatic; reads public releases and commits generated files |
 
-WinGet submission uses [`wingetcreate`](https://github.com/microsoft/winget-create).
-The publish workflow runs on `windows-latest`, installs the .NET 6 runtime,
-downloads the standalone `wingetcreate.exe`, and calls
-`wingetcreate submit --prtitle ... --token ... --no-open <manifest-dir>`.
-Locally, set `WINGETCREATE` to the exe path or install it with
-`winget install wingetcreate`.
+WinGet submission uses the GitHub REST API through the `gh` CLI
+(`tool/submit_winget.py`): it syncs the fork's `master`, creates a branch from
+upstream, writes the three YAML files under `manifests/...`, and opens the PR
+with the upstream template. No Windows runner or `wingetcreate` binary is
+needed; the same command works locally with an authenticated `gh` session.
 
 The first WinGet package from an account needs a one-time Microsoft CLA reply on
 the PR. `ejfkdev.ddc` 0.1.33 is already merged upstream, so this account has
@@ -242,7 +241,7 @@ versions publish normally.
   Every download is still hashed and compared with the GitHub API digest, so a
   mirror cannot change what is installed.
 - Multi-command WinGet payloads use `ZIP_STORED` and fixed timestamps so the
-  same inputs produce the same SHA-256 on macOS, Linux and Windows runners.
+  same inputs produce the same SHA-256 on macOS and Linux runners.
 - WinGet package IDs are permanent. Do not rename `ejfkdev.<program>` after the
   first merged manifest; a rename is a new package and a new review.
 - `proprietary` entries (`zaip`, `oss`) have no upstream license file. This is a
