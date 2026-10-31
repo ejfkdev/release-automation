@@ -26,6 +26,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import urllib.parse
 import uuid
 from pathlib import Path
 
@@ -180,6 +181,34 @@ def ensure_bundle(program: dict, version: str, record: dict, arch: str) -> None:
     note(f"{name}: uploaded {entry['name']}")
 
 
+def find_open_pr(
+    owner: str, fork: str, identifier: str, version: str
+) -> str | None:
+    """Return an open PR URL for this package/version, if one exists."""
+    prefix = f"{identifier}-{version}-"
+    refs = gh_api(f"repos/{fork}/git/matching-refs/heads/{prefix}")
+    if isinstance(refs, list):
+        for ref in refs:
+            branch = ref.get("ref", "").rsplit("/", 1)[-1]
+            if not branch:
+                continue
+            pulls = gh_api(
+                f"repos/{UPSTREAM}/pulls?head={owner}:{branch}&state=open"
+            )
+            if isinstance(pulls, list) and pulls:
+                return pulls[0].get("html_url")
+    query = urllib.parse.quote(
+        f'repo:{UPSTREAM} is:pr is:open "{identifier}" "{version}"'
+    )
+    found = gh_api(f"search/issues?q={query}&per_page=10")
+    if isinstance(found, dict):
+        for item in found.get("items", []):
+            title = item.get("title", "")
+            if identifier in title and version in title:
+                return item.get("html_url")
+    return None
+
+
 def submit(program: dict, version: str, record: dict, yes: bool) -> None:
     name = program["name"]
     config = program.get("winget")
@@ -193,6 +222,15 @@ def submit(program: dict, version: str, record: dict, yes: bool) -> None:
         return
     if current and status.version_key(current) > status.version_key(version):
         die(f"{name}: WinGet has newer {current}; refusing to publish {version}")
+
+    owner = gh_api("user")
+    if not isinstance(owner, dict):
+        die("cannot resolve the authenticated GitHub user")
+    fork = f"{owner['login']}/{UPSTREAM.split('/')[1]}"
+    existing = find_open_pr(owner["login"], fork, identifier, version)
+    if existing:
+        note(f"{name}: open WinGet PR already exists: {existing}")
+        return
 
     files = manifest_files(program, version)
     relative = sync.winget_dir(program, version).relative_to(sync.WINGET_DIR)
@@ -215,10 +253,6 @@ def submit(program: dict, version: str, record: dict, yes: bool) -> None:
     for arch in sync.winget_arch_map(program):
         ensure_bundle(program, version, record, arch)
 
-    owner = gh_api("user")
-    if not isinstance(owner, dict):
-        die("cannot resolve the authenticated GitHub user")
-    fork = f"{owner['login']}/{UPSTREAM.split('/')[1]}"
     upstream_sha = get_ref(UPSTREAM, UPSTREAM_BRANCH)
     sync_fork(fork)
     fork_sha = get_ref(fork, UPSTREAM_BRANCH)
