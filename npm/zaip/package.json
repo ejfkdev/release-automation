@@ -1,0 +1,49 @@
+{
+  "name": "@ejfkdev/zaip",
+  "version": "1.1.0",
+  "description": "WebSocket tunnel proxy with client and server",
+  "license": "UNLICENSED",
+  "author": "ejfkdev",
+  "homepage": "https://github.com/ejfkdev/zaip",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejfkdev/zaip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfkdev/zaip/issues"
+  },
+  "bin": {
+    "zaip-client": "bin/zaip-client.js",
+    "zaip-server": "bin/zaip-server.js"
+  },
+  "files": [
+    "bin/zaip-client.js",
+    "bin/zaip-server.js",
+    "install.js"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "websocket",
+    "tunnel",
+    "proxy",
+    "networking",
+    "cli"
+  ]
+}

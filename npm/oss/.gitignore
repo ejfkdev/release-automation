@@ -1,0 +1,5 @@
+/bin/oss
+/bin/oss.exe
+/bin/.oss-download-*
+*.tgz
+node_modules/

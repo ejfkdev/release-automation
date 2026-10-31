@@ -1,0 +1,46 @@
+{
+  "name": "@ejfkdev/ov",
+  "version": "0.1.3",
+  "description": "Download URL version prober",
+  "license": "MIT",
+  "author": "ejfkdev",
+  "homepage": "https://github.com/ejfkdev/ov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejfkdev/ov.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfkdev/ov/issues"
+  },
+  "bin": {
+    "ov": "bin/ov.js"
+  },
+  "files": [
+    "bin/ov.js",
+    "install.js"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "download",
+    "version",
+    "probe",
+    "cli"
+  ]
+}

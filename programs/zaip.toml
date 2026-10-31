@@ -1,0 +1,45 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "zaip"
+repo = "ejfkdev/zaip"
+display_name = "ZAIP"
+summary = "WebSocket tunnel proxy with client and server"
+description = "zaip is a WebSocket tunnel proxy with a client and a server for exposing services through restricted networks."
+license = "Proprietary"
+homepage = "https://github.com/ejfkdev/zaip"
+keywords = ["websocket", "tunnel", "proxy", "networking", "cli"]
+bins = ["zaip-client", "zaip-server"]
+
+[npm]
+package = "@ejfkdev/zaip"
+
+[winget]
+id = "ejfkdev.zaip"
+tags = ["websocket", "tunnel", "proxy", "networking", "cli"]
+bundle = true
+
+[assets]
+
+[assets."x86_64-apple-darwin"]
+"zaip-client" = "zaip-client_macos_amd64"
+"zaip-server" = "zaip-server_macos_amd64"
+
+[assets."aarch64-apple-darwin"]
+"zaip-client" = "zaip-client_macos_arm64"
+"zaip-server" = "zaip-server_macos_arm64"
+
+[assets."x86_64-unknown-linux-gnu"]
+"zaip-client" = "zaip-client_linux_amd64"
+"zaip-server" = "zaip-server_linux_amd64"
+
+[assets."aarch64-unknown-linux-gnu"]
+"zaip-client" = "zaip-client_linux_arm64"
+"zaip-server" = "zaip-server_linux_arm64"
+
+[assets."x86_64-pc-windows-msvc"]
+"zaip-client" = "zaip-client_windows_amd64.exe"
+"zaip-server" = "zaip-server_windows_amd64.exe"
+
+[assets."aarch64-pc-windows-msvc"]
+"zaip-client" = "zaip-client_windows_arm64.exe"
+"zaip-server" = "zaip-server_windows_arm64.exe"

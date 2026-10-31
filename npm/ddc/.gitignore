@@ -1,0 +1,5 @@
+/bin/ddc
+/bin/ddc.exe
+/bin/.ddc-download-*
+*.tgz
+node_modules/

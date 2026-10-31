@@ -1,0 +1,26 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "tspc"
+repo = "ejfkdev/typespec-rs"
+display_name = "TypeSpec Compiler (tspc)"
+summary = "TypeSpec compiler CLI"
+description = "tspc is the TypeSpec compiler CLI: a Rust implementation of the TypeSpec type system with a parser, type checker, and emitter."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/typespec-rs"
+keywords = ["typespec", "compiler", "type-system", "cli"]
+bins = ["tspc"]
+
+[npm]
+package = "@ejfkdev/tspc"
+
+[winget]
+id = "ejfkdev.tspc"
+tags = ["typespec", "compiler", "type-system", "cli"]
+
+[assets]
+"x86_64-apple-darwin" = "tspc-x86_64-apple-darwin"
+"aarch64-apple-darwin" = "tspc-aarch64-apple-darwin"
+"x86_64-unknown-linux-gnu" = "tspc-x86_64-unknown-linux-gnu"
+"aarch64-unknown-linux-gnu" = "tspc-aarch64-unknown-linux-gnu"
+"x86_64-pc-windows-msvc" = "tspc-x86_64-pc-windows-msvc.exe"
+"aarch64-pc-windows-msvc" = "tspc-aarch64-pc-windows-msvc.exe"

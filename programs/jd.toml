@@ -1,0 +1,26 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "jd"
+repo = "ejfkdev/jd"
+display_name = "jd"
+summary = "JavaScript deobfuscator for obfuscator.io and minified code"
+description = "jd deobfuscates JavaScript produced by obfuscator.io and other minifiers; it is a Go port of webcrack and synchrony."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/jd"
+keywords = ["javascript", "deobfuscator", "reverse-engineering", "cli"]
+bins = ["jd"]
+
+[npm]
+package = "@ejfkdev/jd"
+
+[winget]
+id = "ejfkdev.jd"
+tags = ["javascript", "deobfuscator", "reverse-engineering", "cli"]
+
+[assets]
+"x86_64-apple-darwin" = "jd-v{version}-darwin-amd64"
+"aarch64-apple-darwin" = "jd-v{version}-darwin-arm64"
+"x86_64-unknown-linux-gnu" = "jd-v{version}-linux-amd64"
+"aarch64-unknown-linux-gnu" = "jd-v{version}-linux-arm64"
+"x86_64-pc-windows-msvc" = "jd-v{version}-windows-amd64.exe"
+"aarch64-pc-windows-msvc" = "jd-v{version}-windows-arm64.exe"

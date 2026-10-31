@@ -1,0 +1,47 @@
+{
+  "name": "@ejfkdev/dae",
+  "version": "0.1.15",
+  "description": "Dart AOT snapshot analyzer and decompiler",
+  "license": "MIT",
+  "author": "ejfkdev",
+  "homepage": "https://github.com/ejfkdev/dae",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejfkdev/dae.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfkdev/dae/issues"
+  },
+  "bin": {
+    "dae": "bin/dae.js"
+  },
+  "files": [
+    "bin/dae.js",
+    "install.js"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "dart",
+    "snapshot",
+    "reverse-engineering",
+    "decompiler",
+    "cli"
+  ]
+}

@@ -1,0 +1,5 @@
+/bin/vcc
+/bin/vcc.exe
+/bin/.vcc-download-*
+*.tgz
+node_modules/

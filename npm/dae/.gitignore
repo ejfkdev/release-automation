@@ -1,0 +1,5 @@
+/bin/dae
+/bin/dae.exe
+/bin/.dae-download-*
+*.tgz
+node_modules/

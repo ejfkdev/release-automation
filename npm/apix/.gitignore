@@ -1,0 +1,5 @@
+/bin/apix
+/bin/apix.exe
+/bin/.apix-download-*
+*.tgz
+node_modules/

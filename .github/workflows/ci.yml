@@ -1,0 +1,42 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Python syntax
+        run: python3 -m py_compile tool/*.py
+
+      - name: Generated files match catalog
+        run: python3 tool/sync.py --check
+
+      - name: npm package dry run
+        run: |
+          set -euo pipefail
+          for dir in npm/*/; do
+            echo "== $dir"
+            (cd "$dir" && npm pack --dry-run >/dev/null)
+          done
+
+      - name: WinGet schema validation
+        run: |
+          python3 -m pip install --quiet pyyaml jsonschema
+          python3 tool/validate_winget.py

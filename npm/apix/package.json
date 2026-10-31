@@ -1,0 +1,47 @@
+{
+  "name": "@ejfkdev/apix",
+  "version": "0.0.2",
+  "description": "AI-friendly HTTP request minimization tool",
+  "license": "MIT",
+  "author": "ejfkdev",
+  "homepage": "https://github.com/ejfkdev/apix",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejfkdev/apix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfkdev/apix/issues"
+  },
+  "bin": {
+    "apix": "bin/apix.js"
+  },
+  "files": [
+    "bin/apix.js",
+    "install.js"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "http",
+    "api",
+    "minimization",
+    "reverse-engineering",
+    "cli"
+  ]
+}

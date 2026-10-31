@@ -1,0 +1,11 @@
+/bin/saw-client
+/bin/saw-client.exe
+/bin/.saw-client-download-*
+/bin/saw-server
+/bin/saw-server.exe
+/bin/.saw-server-download-*
+/bin/saw-shell
+/bin/saw-shell.exe
+/bin/.saw-shell-download-*
+*.tgz
+node_modules/

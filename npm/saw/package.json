@@ -1,0 +1,51 @@
+{
+  "name": "@ejfkdev/saw",
+  "version": "0.2.0",
+  "description": "Persistent terminal sessions you can reconnect to from any device",
+  "license": "MPL-2.0",
+  "author": "ejfkdev",
+  "homepage": "https://github.com/ejfkdev/ShellAnyWhere",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejfkdev/ShellAnyWhere.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfkdev/ShellAnyWhere/issues"
+  },
+  "bin": {
+    "saw-client": "bin/saw-client.js",
+    "saw-server": "bin/saw-server.js",
+    "saw-shell": "bin/saw-shell.js"
+  },
+  "files": [
+    "bin/saw-client.js",
+    "bin/saw-server.js",
+    "bin/saw-shell.js",
+    "install.js"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "terminal",
+    "session",
+    "remote",
+    "shell",
+    "cli"
+  ]
+}

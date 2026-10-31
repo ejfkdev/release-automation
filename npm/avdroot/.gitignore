@@ -1,0 +1,5 @@
+/bin/avdroot
+/bin/avdroot.exe
+/bin/.avdroot-download-*
+*.tgz
+node_modules/

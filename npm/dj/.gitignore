@@ -1,0 +1,5 @@
+/bin/dj
+/bin/dj.exe
+/bin/.dj-download-*
+*.tgz
+node_modules/

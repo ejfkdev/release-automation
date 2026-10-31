@@ -1,0 +1,46 @@
+{
+  "name": "@ejfkdev/oss",
+  "version": "0.2.5",
+  "description": "S3-compatible cross-cloud object storage CLI",
+  "license": "UNLICENSED",
+  "author": "ejfkdev",
+  "homepage": "https://github.com/ejfkdev/oss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejfkdev/oss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfkdev/oss/issues"
+  },
+  "bin": {
+    "oss": "bin/oss.js"
+  },
+  "files": [
+    "bin/oss.js",
+    "install.js"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "s3",
+    "object-storage",
+    "cloud",
+    "cli"
+  ]
+}

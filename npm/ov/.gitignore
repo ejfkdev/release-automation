@@ -1,0 +1,5 @@
+/bin/ov
+/bin/ov.exe
+/bin/.ov-download-*
+*.tgz
+node_modules/

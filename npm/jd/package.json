@@ -1,0 +1,46 @@
+{
+  "name": "@ejfkdev/jd",
+  "version": "1.0.0",
+  "description": "JavaScript deobfuscator for obfuscator.io and minified code",
+  "license": "MIT",
+  "author": "ejfkdev",
+  "homepage": "https://github.com/ejfkdev/jd",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejfkdev/jd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfkdev/jd/issues"
+  },
+  "bin": {
+    "jd": "bin/jd.js"
+  },
+  "files": [
+    "bin/jd.js",
+    "install.js"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "javascript",
+    "deobfuscator",
+    "reverse-engineering",
+    "cli"
+  ]
+}

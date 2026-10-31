@@ -1,0 +1,26 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "ov"
+repo = "ejfkdev/ov"
+display_name = "ov"
+summary = "Download URL version prober"
+description = "ov probes a download URL, detects the version inside it, and enumerates every downloadable version across operating systems and architectures."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/ov"
+keywords = ["download", "version", "probe", "cli"]
+bins = ["ov"]
+
+[npm]
+package = "@ejfkdev/ov"
+
+[winget]
+id = "ejfkdev.ov"
+tags = ["download", "version", "probe", "cli"]
+
+[assets]
+"x86_64-apple-darwin" = "ov-darwin-amd64"
+"aarch64-apple-darwin" = "ov-darwin-arm64"
+"x86_64-unknown-linux-gnu" = "ov-linux-amd64"
+"aarch64-unknown-linux-gnu" = "ov-linux-arm64"
+"x86_64-pc-windows-msvc" = "ov-windows-amd64.exe"
+"aarch64-pc-windows-msvc" = "ov-windows-arm64.exe"

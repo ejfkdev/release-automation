@@ -1,0 +1,46 @@
+{
+  "name": "@ejfkdev/vcc",
+  "version": "0.1.0",
+  "description": "Unified configuration manager for AI coding tools",
+  "license": "MIT",
+  "author": "ejfkdev",
+  "homepage": "https://github.com/ejfkdev/vcc-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejfkdev/vcc-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfkdev/vcc-cli/issues"
+  },
+  "bin": {
+    "vcc": "bin/vcc.js"
+  },
+  "files": [
+    "bin/vcc.js",
+    "install.js"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "configuration",
+    "ai",
+    "mcp",
+    "cli"
+  ]
+}

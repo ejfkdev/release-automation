@@ -1,0 +1,45 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "pycdc"
+repo = "ejfkdev/pycdc"
+display_name = "pycdc"
+summary = "Python bytecode decompiler and disassembler"
+description = "pycdc decompiles Python bytecode (.pyc/.pyo) and pycdas disassembles it, covering Python 2.0–3.15 and CPython/PyPy."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/pycdc"
+keywords = ["python", "bytecode", "decompiler", "disassembler", "reverse-engineering", "cli"]
+bins = ["pycdc", "pycdas"]
+
+[npm]
+package = "@ejfkdev/pycdc"
+
+[winget]
+id = "ejfkdev.pycdc"
+tags = ["python", "bytecode", "decompiler", "disassembler", "reverse-engineering", "cli"]
+bundle = true
+
+[assets]
+
+[assets."x86_64-apple-darwin"]
+"pycdc" = "pycdc-x86_64-macos"
+"pycdas" = "pycdas-x86_64-macos"
+
+[assets."aarch64-apple-darwin"]
+"pycdc" = "pycdc-aarch64-macos"
+"pycdas" = "pycdas-aarch64-macos"
+
+[assets."x86_64-unknown-linux-gnu"]
+"pycdc" = "pycdc-x86_64-linux"
+"pycdas" = "pycdas-x86_64-linux"
+
+[assets."aarch64-unknown-linux-gnu"]
+"pycdc" = "pycdc-aarch64-linux"
+"pycdas" = "pycdas-aarch64-linux"
+
+[assets."x86_64-pc-windows-msvc"]
+"pycdc" = "pycdc-x86_64-windows.exe"
+"pycdas" = "pycdas-x86_64-windows.exe"
+
+[assets."aarch64-pc-windows-msvc"]
+"pycdc" = "pycdc-aarch64-windows.exe"
+"pycdas" = "pycdas-aarch64-windows.exe"

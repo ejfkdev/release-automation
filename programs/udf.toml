@@ -1,0 +1,26 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "udf"
+repo = "ejfkdev/udf"
+display_name = "udf"
+summary = "Extract files from disk images, container archives, and filesystems"
+description = "udf extracts files from disk images, container archives, and filesystems. It supports a wide range of image and archive formats through a single command-line binary."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/udf"
+keywords = ["disk-image", "archive", "filesystem", "extractor", "cli"]
+bins = ["udf"]
+
+[npm]
+package = "@ejfkdev/udf"
+
+[winget]
+id = "ejfkdev.udf"
+tags = ["disk-image", "archive", "filesystem", "extractor", "cli"]
+
+[assets]
+"x86_64-apple-darwin" = "udf_v{version}_darwin_amd64.tar.gz"
+"aarch64-apple-darwin" = "udf_v{version}_darwin_arm64.tar.gz"
+"x86_64-unknown-linux-gnu" = "udf_v{version}_linux_amd64.tar.gz"
+"aarch64-unknown-linux-gnu" = "udf_v{version}_linux_arm64.tar.gz"
+"x86_64-pc-windows-msvc" = "udf_v{version}_windows_amd64.zip"
+"aarch64-pc-windows-msvc" = "udf_v{version}_windows_arm64.zip"

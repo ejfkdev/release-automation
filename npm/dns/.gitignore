@@ -1,0 +1,5 @@
+/bin/dns
+/bin/dns.exe
+/bin/.dns-download-*
+*.tgz
+node_modules/

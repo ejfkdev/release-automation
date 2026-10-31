@@ -1,0 +1,26 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "ddc"
+repo = "ejfkdev/ddc"
+display_name = "ddc"
+summary = "DEX to Java decompiler with CLI, HTTP API and MCP server"
+description = "ddc decompiles Android DEX bytecode to readable Java. One binary exposes a CLI, an HTTP API and an MCP server; it reads APK, XAPK, APKS, JAR and ZIP containers and handles multi-dex apps."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/ddc"
+keywords = ["dex", "decompiler", "android", "reverse-engineering", "cli", "mcp"]
+bins = ["ddc"]
+
+[npm]
+package = "@ejfkdev/ddc"
+
+[winget]
+id = "ejfkdev.ddc"
+tags = ["dex", "decompiler", "android", "reverse-engineering", "cli", "mcp"]
+
+[assets]
+"x86_64-apple-darwin" = "ddc-v{version}-x86_64-apple-darwin"
+"aarch64-apple-darwin" = "ddc-v{version}-aarch64-apple-darwin"
+"x86_64-unknown-linux-gnu" = "ddc-v{version}-x86_64-unknown-linux-gnu"
+"aarch64-unknown-linux-gnu" = "ddc-v{version}-aarch64-unknown-linux-gnu"
+"x86_64-pc-windows-msvc" = "ddc-v{version}-x86_64-pc-windows-msvc.exe"
+"aarch64-pc-windows-msvc" = "ddc-v{version}-aarch64-pc-windows-msvc.exe"

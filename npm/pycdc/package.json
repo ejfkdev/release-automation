@@ -1,0 +1,50 @@
+{
+  "name": "@ejfkdev/pycdc",
+  "version": "0.8.0",
+  "description": "Python bytecode decompiler and disassembler",
+  "license": "MIT",
+  "author": "ejfkdev",
+  "homepage": "https://github.com/ejfkdev/pycdc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejfkdev/pycdc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfkdev/pycdc/issues"
+  },
+  "bin": {
+    "pycdc": "bin/pycdc.js",
+    "pycdas": "bin/pycdas.js"
+  },
+  "files": [
+    "bin/pycdc.js",
+    "bin/pycdas.js",
+    "install.js"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "python",
+    "bytecode",
+    "decompiler",
+    "disassembler",
+    "reverse-engineering",
+    "cli"
+  ]
+}

@@ -1,0 +1,5 @@
+/bin/tspc
+/bin/tspc.exe
+/bin/.tspc-download-*
+*.tgz
+node_modules/

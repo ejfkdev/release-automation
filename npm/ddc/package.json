@@ -1,0 +1,48 @@
+{
+  "name": "@ejfkdev/ddc",
+  "version": "0.1.33",
+  "description": "DEX to Java decompiler with CLI, HTTP API and MCP server",
+  "license": "MIT",
+  "author": "ejfkdev",
+  "homepage": "https://github.com/ejfkdev/ddc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejfkdev/ddc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfkdev/ddc/issues"
+  },
+  "bin": {
+    "ddc": "bin/ddc.js"
+  },
+  "files": [
+    "bin/ddc.js",
+    "install.js"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "dex",
+    "decompiler",
+    "android",
+    "reverse-engineering",
+    "cli",
+    "mcp"
+  ]
+}

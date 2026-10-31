@@ -1,0 +1,5 @@
+/bin/jscd
+/bin/jscd.exe
+/bin/.jscd-download-*
+*.tgz
+node_modules/

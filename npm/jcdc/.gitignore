@@ -1,0 +1,5 @@
+/bin/jcdc
+/bin/jcdc.exe
+/bin/.jcdc-download-*
+*.tgz
+node_modules/

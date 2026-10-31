@@ -1,0 +1,25 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "vcc"
+repo = "ejfkdev/vcc-cli"
+display_name = "VCC"
+summary = "Unified configuration manager for AI coding tools"
+description = "VCC defines AI coding tool configuration once — providers, MCP servers, hooks, prompts, skills, agents and environment variables — and applies it to any supported tool."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/vcc-cli"
+keywords = ["configuration", "ai", "mcp", "cli"]
+bins = ["vcc"]
+
+[npm]
+package = "@ejfkdev/vcc"
+
+[winget]
+id = "ejfkdev.vcc"
+tags = ["configuration", "ai", "mcp", "cli"]
+
+[assets]
+"x86_64-apple-darwin" = "vcc-x86_64-macos"
+"aarch64-apple-darwin" = "vcc-aarch64-macos"
+"x86_64-unknown-linux-gnu" = "vcc-x86_64-linux-gnu"
+"aarch64-unknown-linux-gnu" = "vcc-aarch64-linux-gnu"
+"x86_64-pc-windows-msvc" = "vcc-x86_64-windows.exe"

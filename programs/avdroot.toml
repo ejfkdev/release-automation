@@ -1,0 +1,26 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "avdroot"
+repo = "ejfkdev/avdroot"
+display_name = "avdroot"
+summary = "Root an Android Studio emulator with Magisk"
+description = "avdroot roots an Android Studio emulator by patching its ramdisk with Magisk, in pure Go."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/avdroot"
+keywords = ["android", "emulator", "magisk", "root", "cli"]
+bins = ["avdroot"]
+
+[npm]
+package = "@ejfkdev/avdroot"
+
+[winget]
+id = "ejfkdev.avdroot"
+tags = ["android", "emulator", "magisk", "root", "cli"]
+
+[assets]
+"x86_64-apple-darwin" = "avdroot_darwin_amd64"
+"aarch64-apple-darwin" = "avdroot_darwin_arm64"
+"x86_64-unknown-linux-gnu" = "avdroot_linux_amd64"
+"aarch64-unknown-linux-gnu" = "avdroot_linux_arm64"
+"x86_64-pc-windows-msvc" = "avdroot_windows_amd64.exe"
+"aarch64-pc-windows-msvc" = "avdroot_windows_arm64.exe"

@@ -1,0 +1,25 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "dns"
+repo = "ejfkdev/dns"
+display_name = "dns"
+summary = "Multi-server DNS query tool with DoT, DoH, DoQ and HTTPDNS"
+description = "dns queries multiple DNS servers concurrently for every record type, with support for DoT, DoH, DoQ and HTTPDNS."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/dns"
+keywords = ["dns", "doh", "dot", "doq", "cli"]
+bins = ["dns"]
+
+[npm]
+package = "@ejfkdev/dns"
+
+[winget]
+id = "ejfkdev.dns"
+tags = ["dns", "doh", "dot", "doq", "cli"]
+
+[assets]
+"x86_64-apple-darwin" = "dns-{version}-x86_64-apple-darwin"
+"aarch64-apple-darwin" = "dns-{version}-aarch64-apple-darwin"
+"x86_64-unknown-linux-gnu" = "dns-{version}-x86_64-unknown-linux-gnu"
+"aarch64-unknown-linux-gnu" = "dns-{version}-aarch64-unknown-linux-gnu"
+"x86_64-pc-windows-msvc" = "dns-{version}-x86_64-pc-windows-msvc.exe"

@@ -1,0 +1,8 @@
+/bin/zaip-client
+/bin/zaip-client.exe
+/bin/.zaip-client-download-*
+/bin/zaip-server
+/bin/zaip-server.exe
+/bin/.zaip-server-download-*
+*.tgz
+node_modules/

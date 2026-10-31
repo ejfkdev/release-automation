@@ -1,0 +1,25 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "apix"
+repo = "ejfkdev/apix"
+display_name = "apix"
+summary = "AI-friendly HTTP request minimization tool"
+description = "apix minimizes HTTP requests into a compact, replayable form that AI agents and humans can inspect and reuse."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/apix"
+keywords = ["http", "api", "minimization", "reverse-engineering", "cli"]
+bins = ["apix"]
+
+[npm]
+package = "@ejfkdev/apix"
+
+[winget]
+id = "ejfkdev.apix"
+tags = ["http", "api", "minimization", "reverse-engineering", "cli"]
+
+[assets]
+"x86_64-apple-darwin" = "apix-darwin-amd64"
+"aarch64-apple-darwin" = "apix-darwin-arm64"
+"x86_64-unknown-linux-gnu" = "apix-linux-amd64"
+"aarch64-unknown-linux-gnu" = "apix-linux-arm64"
+"x86_64-pc-windows-msvc" = "apix-windows-amd64.exe"

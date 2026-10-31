@@ -1,0 +1,8 @@
+/bin/pycdc
+/bin/pycdc.exe
+/bin/.pycdc-download-*
+/bin/pycdas
+/bin/pycdas.exe
+/bin/.pycdas-download-*
+*.tgz
+node_modules/

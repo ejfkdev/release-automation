@@ -1,0 +1,46 @@
+{
+  "name": "@ejfkdev/tspc",
+  "version": "0.5.7",
+  "description": "TypeSpec compiler CLI",
+  "license": "MIT",
+  "author": "ejfkdev",
+  "homepage": "https://github.com/ejfkdev/typespec-rs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejfkdev/typespec-rs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfkdev/typespec-rs/issues"
+  },
+  "bin": {
+    "tspc": "bin/tspc.js"
+  },
+  "files": [
+    "bin/tspc.js",
+    "install.js"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "typespec",
+    "compiler",
+    "type-system",
+    "cli"
+  ]
+}

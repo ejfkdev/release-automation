@@ -1,0 +1,26 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "jscd"
+repo = "ejfkdev/jscd"
+display_name = "jscd"
+summary = "Reverse bytenode .jsc (V8 code cache) to JavaScript"
+description = "jscd reverses bytenode .jsc files (V8 code cache) back to JavaScript, statically, without a patched V8 or Node. It covers Node 8 through 26 / V8 5.8–14.6."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/jscd"
+keywords = ["javascript", "bytenode", "v8", "decompiler", "reverse-engineering", "cli"]
+bins = ["jscd"]
+
+[npm]
+package = "@ejfkdev/jscd"
+
+[winget]
+id = "ejfkdev.jscd"
+tags = ["javascript", "bytenode", "v8", "decompiler", "reverse-engineering", "cli"]
+
+[assets]
+"x86_64-apple-darwin" = "jscd-v{version}-macos-amd64"
+"aarch64-apple-darwin" = "jscd-v{version}-macos-arm64"
+"x86_64-unknown-linux-gnu" = "jscd-v{version}-linux-amd64"
+"aarch64-unknown-linux-gnu" = "jscd-v{version}-linux-arm64"
+"x86_64-pc-windows-msvc" = "jscd-v{version}-windows-amd64.exe"
+"aarch64-pc-windows-msvc" = "jscd-v{version}-windows-arm64.exe"

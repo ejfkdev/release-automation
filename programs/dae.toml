@@ -1,0 +1,26 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "dae"
+repo = "ejfkdev/dae"
+display_name = "dae"
+summary = "Dart AOT snapshot analyzer and decompiler"
+description = "dae analyzes Dart AOT snapshots, exports blutter-compatible symbols and structs for IDA, radare2 and Frida, and decompiles functions to Dart. It supports desktop and mobile snapshots and never runs the target."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/dae"
+keywords = ["dart", "snapshot", "reverse-engineering", "decompiler", "cli"]
+bins = ["dae"]
+
+[npm]
+package = "@ejfkdev/dae"
+
+[winget]
+id = "ejfkdev.dae"
+tags = ["dart", "snapshot", "reverse-engineering", "decompiler", "cli"]
+
+[assets]
+"x86_64-apple-darwin" = "dae-macOS-x64"
+"aarch64-apple-darwin" = "dae-macOS-arm64"
+"x86_64-unknown-linux-gnu" = "dae-Linux-x64"
+"aarch64-unknown-linux-gnu" = "dae-Linux-arm64"
+"x86_64-pc-windows-msvc" = "dae-Windows-x64.exe"
+"aarch64-pc-windows-msvc" = "dae-Windows-arm64.exe"

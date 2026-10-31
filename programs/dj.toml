@@ -1,0 +1,26 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "dj"
+repo = "ejfkdev/dj"
+display_name = "dj"
+summary = "Dynamic JavaScript file extractor"
+description = "dj extracts dynamically loaded JavaScript files from websites by statically analyzing HTML and JavaScript. It reports the scripts a page actually loads, including runtime-injected bundles."
+license = "MPL-2.0"
+homepage = "https://github.com/ejfkdev/dj"
+keywords = ["javascript", "extractor", "web", "reverse-engineering", "cli"]
+bins = ["dj"]
+
+[npm]
+package = "@ejfkdev/dj"
+
+[winget]
+id = "ejfkdev.dj"
+tags = ["javascript", "extractor", "web", "reverse-engineering", "cli"]
+
+[assets]
+"x86_64-apple-darwin" = "dj-darwin-amd64"
+"aarch64-apple-darwin" = "dj-darwin-arm64"
+"x86_64-unknown-linux-gnu" = "dj-linux-amd64"
+"aarch64-unknown-linux-gnu" = "dj-linux-arm64"
+"x86_64-pc-windows-msvc" = "dj-windows-amd64.exe"
+"aarch64-pc-windows-msvc" = "dj-windows-arm64.exe"

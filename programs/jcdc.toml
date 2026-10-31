@@ -1,0 +1,26 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "jcdc"
+repo = "ejfkdev/jcdc"
+display_name = "jcdc"
+summary = "Java class file decompiler"
+description = "jcdc decompiles Java class files (Java 1.1–26, class version 45–70) back into readable, recompilable Java source."
+license = "MIT"
+homepage = "https://github.com/ejfkdev/jcdc"
+keywords = ["java", "decompiler", "bytecode", "reverse-engineering", "cli"]
+bins = ["jcdc"]
+
+[npm]
+package = "@ejfkdev/jcdc"
+
+[winget]
+id = "ejfkdev.jcdc"
+tags = ["java", "decompiler", "bytecode", "reverse-engineering", "cli"]
+
+[assets]
+"x86_64-apple-darwin" = "jcdc-v{version}-macos-amd64"
+"aarch64-apple-darwin" = "jcdc-v{version}-macos-arm64"
+"x86_64-unknown-linux-gnu" = "jcdc-v{version}-linux-amd64"
+"aarch64-unknown-linux-gnu" = "jcdc-v{version}-linux-arm64"
+"x86_64-pc-windows-msvc" = "jcdc-v{version}-windows-amd64.exe"
+"aarch64-pc-windows-msvc" = "jcdc-v{version}-windows-arm64.exe"

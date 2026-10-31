@@ -1,0 +1,48 @@
+{
+  "name": "@ejfkdev/jscd",
+  "version": "0.3.0",
+  "description": "Reverse bytenode .jsc (V8 code cache) to JavaScript",
+  "license": "MIT",
+  "author": "ejfkdev",
+  "homepage": "https://github.com/ejfkdev/jscd",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejfkdev/jscd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ejfkdev/jscd/issues"
+  },
+  "bin": {
+    "jscd": "bin/jscd.js"
+  },
+  "files": [
+    "bin/jscd.js",
+    "install.js"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "javascript",
+    "bytenode",
+    "v8",
+    "decompiler",
+    "reverse-engineering",
+    "cli"
+  ]
+}

@@ -1,0 +1,40 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "oss"
+repo = "ejfkdev/oss"
+display_name = "oss"
+summary = "S3-compatible cross-cloud object storage CLI"
+description = "oss is an S3-compatible object storage CLI that lists, exports and downloads buckets across AWS, Aliyun, Tencent, Huawei, Qiniu, Baidu, UCloud, JD Cloud and other S3-compatible services."
+license = "Proprietary"
+homepage = "https://github.com/ejfkdev/oss"
+keywords = ["s3", "object-storage", "cloud", "cli"]
+bins = ["oss"]
+
+[npm]
+package = "@ejfkdev/oss"
+
+[winget]
+id = "ejfkdev.oss"
+tags = ["s3", "object-storage", "cloud", "cli"]
+
+[assets]
+
+[assets."x86_64-apple-darwin"]
+file = "oss-v{version}-darwin-amd64.tar.gz"
+member = "oss-darwin-amd64"
+
+[assets."aarch64-apple-darwin"]
+file = "oss-v{version}-darwin-arm64.tar.gz"
+member = "oss-darwin-arm64"
+
+[assets."x86_64-unknown-linux-gnu"]
+file = "oss-v{version}-linux-amd64.tar.gz"
+member = "oss-linux-amd64"
+
+[assets."aarch64-unknown-linux-gnu"]
+file = "oss-v{version}-linux-arm64.tar.gz"
+member = "oss-linux-arm64"
+
+[assets."x86_64-pc-windows-msvc"]
+file = "oss-v{version}-windows-amd64.zip"
+member = "oss-v{version}-windows-amd64.exe"

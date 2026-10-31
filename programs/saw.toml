@@ -1,0 +1,51 @@
+# Binary packaging catalog. See README.md for the schema.
+schema = 1
+name = "saw"
+repo = "ejfkdev/ShellAnyWhere"
+display_name = "ShellAnyWhere"
+summary = "Persistent terminal sessions you can reconnect to from any device"
+description = "ShellAnyWhere keeps terminal sessions alive and lets you reconnect to them from any device, with client, server and shell binaries."
+license = "MPL-2.0"
+homepage = "https://github.com/ejfkdev/ShellAnyWhere"
+keywords = ["terminal", "session", "remote", "shell", "cli"]
+bins = ["saw-client", "saw-server", "saw-shell"]
+
+[npm]
+package = "@ejfkdev/saw"
+
+[winget]
+id = "ejfkdev.saw"
+tags = ["terminal", "session", "remote", "shell", "cli"]
+bundle = true
+
+[assets]
+
+[assets."x86_64-apple-darwin"]
+"saw-client" = "saw-client-macos-x86_64"
+"saw-server" = "saw-server-macos-x86_64"
+"saw-shell" = "saw-shell-macos-x86_64"
+
+[assets."aarch64-apple-darwin"]
+"saw-client" = "saw-client-macos-arm64"
+"saw-server" = "saw-server-macos-arm64"
+"saw-shell" = "saw-shell-macos-arm64"
+
+[assets."x86_64-unknown-linux-gnu"]
+"saw-client" = "saw-client-linux-x86_64"
+"saw-server" = "saw-server-linux-x86_64"
+"saw-shell" = "saw-shell-linux-x86_64"
+
+[assets."aarch64-unknown-linux-gnu"]
+"saw-client" = "saw-client-linux-arm64"
+"saw-server" = "saw-server-linux-arm64"
+"saw-shell" = "saw-shell-linux-arm64"
+
+[assets."x86_64-pc-windows-msvc"]
+"saw-client" = "saw-client-windows-x86_64.exe"
+"saw-server" = "saw-server-windows-x86_64.exe"
+"saw-shell" = "saw-shell-windows-x86_64.exe"
+
+[assets."aarch64-pc-windows-msvc"]
+"saw-client" = "saw-client-windows-arm64.exe"
+"saw-server" = "saw-server-windows-arm64.exe"
+"saw-shell" = "saw-shell-windows-arm64.exe"
