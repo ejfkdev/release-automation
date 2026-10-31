@@ -62,8 +62,9 @@ catalog 的完整字段、归档 `member`、多命令 `bundle` 的写法见英�
 
 WinGet 通过 `gh` 调 GitHub REST API 直接提交 PR（`tool/submit_winget.py`）：先同步 fork 的
 `master`，从 upstream 建分支，把 3 个 YAML 写到 `manifests/...`，再用 upstream 模板开 PR。
-不需要 Windows runner 或 wingetcreate。第一次提交新包需要签 Microsoft CLA；你的账号已在
-PR #466817 通过 `license/cla`，后续无需重复确认。
+不需要 Windows runner 或 wingetcreate。本地只要 `gh auth login` 过就能提交，不需要
+`WINGET_TOKEN`；这个 secret 只用于 CI 的 `publish.yml`。
+第一次提交新包需要签 Microsoft CLA；你的账号已在 PR #466817 通过 `license/cla`，后续无需重复确认。
 
 ## 已知限制
 

@@ -208,9 +208,13 @@ upstream, writes the three YAML files under `manifests/...`, and opens the PR
 with the upstream template. No Windows runner or `wingetcreate` binary is
 needed; the same command works locally with an authenticated `gh` session.
 
+Locally, an authenticated `gh` session is enough to submit: `submit_winget.py`
+calls `gh api`, so no `WINGET_TOKEN` is needed on your machine. The secret is
+only for the `publish.yml` workflow, where a token must be passed explicitly.
+
 The first WinGet package from an account needs a one-time Microsoft CLA reply on
-the PR. `ejfkdev.ddc` 0.1.33 is already merged upstream, so this account has
-almost certainly signed it; check the first new package PR anyway.
+the PR. This account already has a passing `license/cla` check (`#466817`), so
+new PRs only need the label to settle; no new signature is required.
 
 npm's first publication of a brand-new package may be held for review and show
 a `0.0.0-stage` placeholder before the real version becomes installable. Later
