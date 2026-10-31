@@ -82,6 +82,8 @@ def npm_publish(program: dict, version: str, yes: bool) -> None:
     if current == version:
         note(f"{name}: npm already has {package}@{version}, skipping")
         return
+    if current and status.version_key(current) > status.version_key(version):
+        die(f"{name}: npm has newer {current}; refusing to publish {version}")
 
     note(f"{name}: npm {current or 'missing'} -> {version}")
     if not yes:
@@ -215,6 +217,8 @@ def winget_publish(program: dict, version: str, yes: bool) -> None:
     if current == version:
         note(f"{name}: WinGet already has {identifier} {version}, skipping")
         return
+    if current and status.version_key(current) > status.version_key(version):
+        die(f"{name}: WinGet has newer {current}; refusing to publish {version}")
     note(f"{name}: WinGet {current or 'missing'} -> {version}")
 
     manifest_dir = sync.winget_dir(program, version)
