@@ -65,38 +65,38 @@ sha256 = "b101fe8ae9e99c82191a3327215b155b49b9ab94ea7bebf4b602ac76a6893627"
 size = 2790604
 
 ["dae"]
-version = "0.1.15"
-tag = "v0.1.15"
+version = "0.1.17"
+tag = "v0.1.17"
 
 [dae.targets."aarch64-apple-darwin"."dae"]
 name = "dae-macOS-arm64"
-sha256 = "12ddc23f194fc1b880ff9ad85510188fdbb53c4a549e379acf9de385e5cfd140"
-size = 13825248
+sha256 = "e43af191203472d1d1877083026b13df8f7cd1d8bc2430033ac60d0cf70fc449"
+size = 13824352
 
 [dae.targets."aarch64-pc-windows-msvc"."dae"]
 name = "dae-Windows-arm64.exe"
-sha256 = "9b2d1588a7acab81dda5c22ce8afbebb05915ed966fb6e7ac660c286caa1c2d7"
-size = 14164992
+sha256 = "8ca72da2dfc9e7e4a4a6a9cb21a8d1a30c71889eebd203892a24c224657fed2e"
+size = 14167040
 
 [dae.targets."aarch64-unknown-linux-gnu"."dae"]
 name = "dae-Linux-arm64"
-sha256 = "6cd9bc2ed1eb5b1a24ffbe34d5c2ddad6c9dac36a88e48d6ac1090ca3246b3c1"
-size = 16462736
+sha256 = "2dcb6da98bae489b81ed378000b6840924aac4177aa11568668deaf08ee9eaaa"
+size = 16459056
 
 [dae.targets."x86_64-apple-darwin"."dae"]
 name = "dae-macOS-x64"
-sha256 = "0e04cafcfb2f0b0d437308303edd3430c661e71ddc00908009a0fa97d0240999"
-size = 14407024
+sha256 = "30bf99a6e4226ea21ebbbe8ddc398cab320ad1f9ce2896ab89ee93b6b9632842"
+size = 14396208
 
 [dae.targets."x86_64-pc-windows-msvc"."dae"]
 name = "dae-Windows-x64.exe"
-sha256 = "0523027d84995569e05c42c12b3a2c1419c9589445e3d70cab811cbcf8ce605b"
-size = 2216448
+sha256 = "82643f7f7ce90c7144d0af67ed452b46ff554001df07b10d17257051e650294e"
+size = 2217472
 
 [dae.targets."x86_64-unknown-linux-gnu"."dae"]
 name = "dae-Linux-x64"
-sha256 = "a4eaef91b690bade15663a40dd0e06dd223e01ec5fc6300c772cb6176f0f7eb1"
-size = 2688524
+sha256 = "47253768c5be76d5dbf37d4c65e0898f38e349e7f105a086d0e62475099b5978"
+size = 2692460
 
 ["ddc"]
 version = "0.1.33"
@@ -264,38 +264,38 @@ sha256 = "05cba23090eb23e6bbc4d3d1ec3faea43f194b58e058d92e55e58fb1a5dcad28"
 size = 3009840
 
 ["jscd"]
-version = "0.3.0"
-tag = "v0.3.0"
+version = "0.3.1"
+tag = "v0.3.1"
 
 [jscd.targets."aarch64-apple-darwin"."jscd"]
-name = "jscd-v0.3.0-macos-arm64"
-sha256 = "821499211504a7075848ab53d34723ea648547e44ce377394392fdcf75bce67e"
-size = 6733504
+name = "jscd-v0.3.1-macos-arm64"
+sha256 = "e83a181ec52164acaf63487118b5a461a6854d9f0463f6f59dfd2106f050c8c3"
+size = 6771312
 
 [jscd.targets."aarch64-pc-windows-msvc"."jscd"]
-name = "jscd-v0.3.0-windows-arm64.exe"
-sha256 = "5367df46dd0bf2b8dfd45c32757342a4b855790c4a6aef03483903932a20377a"
-size = 1152000
+name = "jscd-v0.3.1-windows-arm64.exe"
+sha256 = "9418bd4f475b9520a37d8b0bb606ff120e09e0922587b3d175d5b9174db2b200"
+size = 925696
 
 [jscd.targets."aarch64-unknown-linux-gnu"."jscd"]
-name = "jscd-v0.3.0-linux-arm64"
-sha256 = "deed5cc319dbf13402b9f42f0ceb31b217bff114bda0c4362ab15093e5e2568a"
-size = 979336
+name = "jscd-v0.3.1-linux-arm64"
+sha256 = "ad8d702c8f862c55bd8c121c95785f6fb50d2fce67705fb9be5ee7a2fea32c7a"
+size = 993624
 
 [jscd.targets."x86_64-apple-darwin"."jscd"]
-name = "jscd-v0.3.0-macos-amd64"
-sha256 = "87f07893c8976315259ca64ddbcfe012dad6dcc62ef8c7fef10d71c485431c0e"
-size = 6958520
+name = "jscd-v0.3.1-macos-amd64"
+sha256 = "07a6d1caeed4bb76b479b428f030d53dd2dd28012f7d805f004203ec92b300f2"
+size = 7009960
 
 [jscd.targets."x86_64-pc-windows-msvc"."jscd"]
-name = "jscd-v0.3.0-windows-amd64.exe"
-sha256 = "0a6c1a407b247218ac792930cdc3b0108da0fc794a8edaafcb8b4a41f99d4134"
-size = 1043968
+name = "jscd-v0.3.1-windows-amd64.exe"
+sha256 = "1b7ccade1f09959fa551d9625142c0a513e52249ff6cac07c89227954ae5f36e"
+size = 1060864
 
 [jscd.targets."x86_64-unknown-linux-gnu"."jscd"]
-name = "jscd-v0.3.0-linux-amd64"
-sha256 = "f70cb8b5867480665db39ac5c14a780efb595eb960603b1dabe3f31ada7d07ab"
-size = 1183640
+name = "jscd-v0.3.1-linux-amd64"
+sha256 = "3158d369f3221dea1af15f5af0deee6bb6b365ef256928cb03cb78153166651b"
+size = 1199060
 
 ["oss"]
 version = "0.2.5"
@@ -361,78 +361,78 @@ sha256 = "0d9a51f0dd40063714a7d901f786baf12aac95020fbec711fd62db8c9c6d4fe5"
 size = 2372200
 
 ["pycdc"]
-version = "0.8.0"
-tag = "v0.8.0"
+version = "0.8.2"
+tag = "v0.8.2"
 
 [pycdc.targets."aarch64-apple-darwin"."pycdas"]
 name = "pycdas-aarch64-macos"
-sha256 = "9668fc883436dff9a29d92d3f078f75512274e32f9d448535a67afe8796ea811"
+sha256 = "a7aeed99eb8cd298c1c5f9705b32824346ed06d25cee2b83ea8bd142c92b665c"
 size = 650688
 
 [pycdc.targets."aarch64-apple-darwin"."pycdc"]
 name = "pycdc-aarch64-macos"
-sha256 = "5e7e94f29b559c26e8a909ec45ad5603f4ddccd977b40109359b83e758880287"
-size = 1990624
+sha256 = "baba4cde955fc30c36e8275c2d091a2fe852e03440c8559399f57c16f7bacf1c"
+size = 2073264
 
 [pycdc.targets."aarch64-pc-windows-msvc"."pycdas"]
 name = "pycdas-aarch64-windows.exe"
-sha256 = "c56197ef6121bc7f4f7cd1e9337d0a534ff86a425356fe217d386f90857b635c"
-size = 199168
+sha256 = "0fe56f0df6fe9a6557bbd008d5f044a2aaf348b1486f155501a59344381d6c24"
+size = 165888
 
 [pycdc.targets."aarch64-pc-windows-msvc"."pycdc"]
 name = "pycdc-aarch64-windows.exe"
-sha256 = "fc4ea5f225d0cdcbafd345b78a80c006cfc9e2b578f73546909098fd2f8675b5"
-size = 757248
+sha256 = "f16fdb7eba59ed0817d6b1935d66537a435bbe55a07c5aca9838dcd00f4eb924"
+size = 633856
 
 [pycdc.targets."aarch64-unknown-linux-gnu"."pycdas"]
 name = "pycdas-aarch64-linux"
-sha256 = "9917c09d7ac4d428405011d6a04d71fe662a5d32dad828bc8974e0c3a58a2f21"
-size = 229500
+sha256 = "3d45013086cfc01fc75667177c9d5af733028015c80e9a2d8d06f077fc674940"
+size = 229460
 
 [pycdc.targets."aarch64-unknown-linux-gnu"."pycdc"]
 name = "pycdc-aarch64-linux"
-sha256 = "9c1ce5651b706f2a7e266d8b97f357cc4aff914048f7c2af25ff1386c5768b9d"
-size = 680776
+sha256 = "6d717ca386dfd03905c9d1adba2274672eed2a286c1345e19ad0f9fd9a4c5347"
+size = 703076
 
 [pycdc.targets."x86_64-apple-darwin"."pycdas"]
 name = "pycdas-x86_64-macos"
-sha256 = "f1c954b88cfa7534f4324c4021ec2056ac9baec08640fd62ed80361d8e4ee0ba"
+sha256 = "81c24e01126361d647ba63cff1ab4b5dc5df78f9398772531250010b36f21410"
 size = 695120
 
 [pycdc.targets."x86_64-apple-darwin"."pycdc"]
 name = "pycdc-x86_64-macos"
-sha256 = "406a2abbc3d3a11e045335603f5d720a5ea827df96e6251f526a8d04c74e5e4e"
-size = 2419208
+sha256 = "bc3c36ba6a9847595adca2ef43cd0616159a5aeae02afcdff0dc29f67b4d4d2f"
+size = 2509464
 
 [pycdc.targets."x86_64-pc-windows-msvc"."pycdas"]
 name = "pycdas-x86_64-windows.exe"
-sha256 = "730d55ee02ef51fa90559973b3a009c60ccd46759a2a801964d4b311dcc79a80"
-size = 186880
+sha256 = "41eab99c458dd78b0e581fa197a6e39d699338acd3c11d10e0a08670bec923ba"
+size = 186368
 
 [pycdc.targets."x86_64-pc-windows-msvc"."pycdc"]
 name = "pycdc-x86_64-windows.exe"
-sha256 = "699c1b85af083e8c552cdc5a2283b18dccd62d9a44cfc8b67905166f7aebbd74"
-size = 683520
+sha256 = "75cd88161a00b9a46a9a06ac1f7c9965d90d2df1f0f28c7d084a67799501fbdc"
+size = 709632
 
 [pycdc.targets."x86_64-unknown-linux-gnu"."pycdas"]
 name = "pycdas-x86_64-linux"
-sha256 = "10522892c9f4def7ad16f5d71b684851b442d8d7385a9ff011a328c3eca69863"
-size = 259516
+sha256 = "04ee19b0f4b19472509f2da2e03857b9c66a680f265974318aa2a6557318cadd"
+size = 259452
 
 [pycdc.targets."x86_64-unknown-linux-gnu"."pycdc"]
 name = "pycdc-x86_64-linux"
-sha256 = "99bc1a8f0818ff265d49ff57e2168f931e9604fa7cd2823fcf7b34f118a139b6"
-size = 781740
+sha256 = "d6ddaca319e78f74f196a9533e5144d48c4a7fe7723b895d4c4428febe2c9be8"
+size = 807804
 
 [pycdc.bundles."arm64"]
-name = "ejfkdev.pycdc-0.8.0-winget-arm64.zip"
-sha256 = "f199f710cc0317cd8eed4ff94dd609edaeb49269351731386e45dbf1203c928f"
-size = 956628
+name = "ejfkdev.pycdc-0.8.2-winget-arm64.zip"
+sha256 = "7b58c998f95a1535a57ad8b043a5b5a30a4d77e44bd3dc13f85c09e99e58aa63"
+size = 799956
 
 [pycdc.bundles."x64"]
-name = "ejfkdev.pycdc-0.8.0-winget-x64.zip"
-sha256 = "cf7ecee5493f0b745a8d2572e752a392e54997d6a804e01ae53c222334fa6fd3"
-size = 870612
+name = "ejfkdev.pycdc-0.8.2-winget-x64.zip"
+sha256 = "ce540a4652d931f1606dfe769601f7606b64c82249cc46ecfb655a50b3ccb42d"
+size = 896212
 
 ["saw"]
 version = "0.2.0"

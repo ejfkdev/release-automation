@@ -14,8 +14,8 @@ const ASSETS = {
   "darwin-arm64": {
     bins: {
       "dae": {
-        url: "https://github.com/ejfkdev/dae/releases/download/v0.1.15/dae-macOS-arm64",
-        sha256: "12ddc23f194fc1b880ff9ad85510188fdbb53c4a549e379acf9de385e5cfd140",
+        url: "https://github.com/ejfkdev/dae/releases/download/v0.1.17/dae-macOS-arm64",
+        sha256: "e43af191203472d1d1877083026b13df8f7cd1d8bc2430033ac60d0cf70fc449",
         archive: "raw",
         member: null,
         env_prefix: "DAE",
@@ -25,8 +25,8 @@ const ASSETS = {
   "darwin-x64": {
     bins: {
       "dae": {
-        url: "https://github.com/ejfkdev/dae/releases/download/v0.1.15/dae-macOS-x64",
-        sha256: "0e04cafcfb2f0b0d437308303edd3430c661e71ddc00908009a0fa97d0240999",
+        url: "https://github.com/ejfkdev/dae/releases/download/v0.1.17/dae-macOS-x64",
+        sha256: "30bf99a6e4226ea21ebbbe8ddc398cab320ad1f9ce2896ab89ee93b6b9632842",
         archive: "raw",
         member: null,
         env_prefix: "DAE",
@@ -36,8 +36,8 @@ const ASSETS = {
   "linux-arm64": {
     bins: {
       "dae": {
-        url: "https://github.com/ejfkdev/dae/releases/download/v0.1.15/dae-Linux-arm64",
-        sha256: "6cd9bc2ed1eb5b1a24ffbe34d5c2ddad6c9dac36a88e48d6ac1090ca3246b3c1",
+        url: "https://github.com/ejfkdev/dae/releases/download/v0.1.17/dae-Linux-arm64",
+        sha256: "2dcb6da98bae489b81ed378000b6840924aac4177aa11568668deaf08ee9eaaa",
         archive: "raw",
         member: null,
         env_prefix: "DAE",
@@ -47,8 +47,8 @@ const ASSETS = {
   "linux-x64": {
     bins: {
       "dae": {
-        url: "https://github.com/ejfkdev/dae/releases/download/v0.1.15/dae-Linux-x64",
-        sha256: "a4eaef91b690bade15663a40dd0e06dd223e01ec5fc6300c772cb6176f0f7eb1",
+        url: "https://github.com/ejfkdev/dae/releases/download/v0.1.17/dae-Linux-x64",
+        sha256: "47253768c5be76d5dbf37d4c65e0898f38e349e7f105a086d0e62475099b5978",
         archive: "raw",
         member: null,
         env_prefix: "DAE",
@@ -58,8 +58,8 @@ const ASSETS = {
   "win32-arm64": {
     bins: {
       "dae": {
-        url: "https://github.com/ejfkdev/dae/releases/download/v0.1.15/dae-Windows-arm64.exe",
-        sha256: "9b2d1588a7acab81dda5c22ce8afbebb05915ed966fb6e7ac660c286caa1c2d7",
+        url: "https://github.com/ejfkdev/dae/releases/download/v0.1.17/dae-Windows-arm64.exe",
+        sha256: "8ca72da2dfc9e7e4a4a6a9cb21a8d1a30c71889eebd203892a24c224657fed2e",
         archive: "raw",
         member: null,
         env_prefix: "DAE",
@@ -69,8 +69,8 @@ const ASSETS = {
   "win32-x64": {
     bins: {
       "dae": {
-        url: "https://github.com/ejfkdev/dae/releases/download/v0.1.15/dae-Windows-x64.exe",
-        sha256: "0523027d84995569e05c42c12b3a2c1419c9589445e3d70cab811cbcf8ce605b",
+        url: "https://github.com/ejfkdev/dae/releases/download/v0.1.17/dae-Windows-x64.exe",
+        sha256: "82643f7f7ce90c7144d0af67ed452b46ff554001df07b10d17257051e650294e",
         archive: "raw",
         member: null,
         env_prefix: "DAE",

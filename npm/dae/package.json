@@ -1,6 +1,6 @@
 {
   "name": "@ejfkdev/dae",
-  "version": "0.1.15",
+  "version": "0.1.17",
   "description": "Dart AOT snapshot analyzer and decompiler",
   "license": "MIT",
   "author": "ejfkdev",

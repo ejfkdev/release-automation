@@ -14,8 +14,8 @@ const ASSETS = {
   "darwin-arm64": {
     bins: {
       "jscd": {
-        url: "https://github.com/ejfkdev/jscd/releases/download/v0.3.0/jscd-v0.3.0-macos-arm64",
-        sha256: "821499211504a7075848ab53d34723ea648547e44ce377394392fdcf75bce67e",
+        url: "https://github.com/ejfkdev/jscd/releases/download/v0.3.1/jscd-v0.3.1-macos-arm64",
+        sha256: "e83a181ec52164acaf63487118b5a461a6854d9f0463f6f59dfd2106f050c8c3",
         archive: "raw",
         member: null,
         env_prefix: "JSCD",
@@ -25,8 +25,8 @@ const ASSETS = {
   "darwin-x64": {
     bins: {
       "jscd": {
-        url: "https://github.com/ejfkdev/jscd/releases/download/v0.3.0/jscd-v0.3.0-macos-amd64",
-        sha256: "87f07893c8976315259ca64ddbcfe012dad6dcc62ef8c7fef10d71c485431c0e",
+        url: "https://github.com/ejfkdev/jscd/releases/download/v0.3.1/jscd-v0.3.1-macos-amd64",
+        sha256: "07a6d1caeed4bb76b479b428f030d53dd2dd28012f7d805f004203ec92b300f2",
         archive: "raw",
         member: null,
         env_prefix: "JSCD",
@@ -36,8 +36,8 @@ const ASSETS = {
   "linux-arm64": {
     bins: {
       "jscd": {
-        url: "https://github.com/ejfkdev/jscd/releases/download/v0.3.0/jscd-v0.3.0-linux-arm64",
-        sha256: "deed5cc319dbf13402b9f42f0ceb31b217bff114bda0c4362ab15093e5e2568a",
+        url: "https://github.com/ejfkdev/jscd/releases/download/v0.3.1/jscd-v0.3.1-linux-arm64",
+        sha256: "ad8d702c8f862c55bd8c121c95785f6fb50d2fce67705fb9be5ee7a2fea32c7a",
         archive: "raw",
         member: null,
         env_prefix: "JSCD",
@@ -47,8 +47,8 @@ const ASSETS = {
   "linux-x64": {
     bins: {
       "jscd": {
-        url: "https://github.com/ejfkdev/jscd/releases/download/v0.3.0/jscd-v0.3.0-linux-amd64",
-        sha256: "f70cb8b5867480665db39ac5c14a780efb595eb960603b1dabe3f31ada7d07ab",
+        url: "https://github.com/ejfkdev/jscd/releases/download/v0.3.1/jscd-v0.3.1-linux-amd64",
+        sha256: "3158d369f3221dea1af15f5af0deee6bb6b365ef256928cb03cb78153166651b",
         archive: "raw",
         member: null,
         env_prefix: "JSCD",
@@ -58,8 +58,8 @@ const ASSETS = {
   "win32-arm64": {
     bins: {
       "jscd": {
-        url: "https://github.com/ejfkdev/jscd/releases/download/v0.3.0/jscd-v0.3.0-windows-arm64.exe",
-        sha256: "5367df46dd0bf2b8dfd45c32757342a4b855790c4a6aef03483903932a20377a",
+        url: "https://github.com/ejfkdev/jscd/releases/download/v0.3.1/jscd-v0.3.1-windows-arm64.exe",
+        sha256: "9418bd4f475b9520a37d8b0bb606ff120e09e0922587b3d175d5b9174db2b200",
         archive: "raw",
         member: null,
         env_prefix: "JSCD",
@@ -69,8 +69,8 @@ const ASSETS = {
   "win32-x64": {
     bins: {
       "jscd": {
-        url: "https://github.com/ejfkdev/jscd/releases/download/v0.3.0/jscd-v0.3.0-windows-amd64.exe",
-        sha256: "0a6c1a407b247218ac792930cdc3b0108da0fc794a8edaafcb8b4a41f99d4134",
+        url: "https://github.com/ejfkdev/jscd/releases/download/v0.3.1/jscd-v0.3.1-windows-amd64.exe",
+        sha256: "1b7ccade1f09959fa551d9625142c0a513e52249ff6cac07c89227954ae5f36e",
         archive: "raw",
         member: null,
         env_prefix: "JSCD",

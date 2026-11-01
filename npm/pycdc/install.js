@@ -14,15 +14,15 @@ const ASSETS = {
   "darwin-arm64": {
     bins: {
       "pycdas": {
-        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.0/pycdas-aarch64-macos",
-        sha256: "9668fc883436dff9a29d92d3f078f75512274e32f9d448535a67afe8796ea811",
+        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdas-aarch64-macos",
+        sha256: "a7aeed99eb8cd298c1c5f9705b32824346ed06d25cee2b83ea8bd142c92b665c",
         archive: "raw",
         member: null,
         env_prefix: "PYCDAS",
       },
       "pycdc": {
-        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.0/pycdc-aarch64-macos",
-        sha256: "5e7e94f29b559c26e8a909ec45ad5603f4ddccd977b40109359b83e758880287",
+        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdc-aarch64-macos",
+        sha256: "baba4cde955fc30c36e8275c2d091a2fe852e03440c8559399f57c16f7bacf1c",
         archive: "raw",
         member: null,
         env_prefix: "PYCDC",
@@ -32,15 +32,15 @@ const ASSETS = {
   "darwin-x64": {
     bins: {
       "pycdas": {
-        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.0/pycdas-x86_64-macos",
-        sha256: "f1c954b88cfa7534f4324c4021ec2056ac9baec08640fd62ed80361d8e4ee0ba",
+        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdas-x86_64-macos",
+        sha256: "81c24e01126361d647ba63cff1ab4b5dc5df78f9398772531250010b36f21410",
         archive: "raw",
         member: null,
         env_prefix: "PYCDAS",
       },
       "pycdc": {
-        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.0/pycdc-x86_64-macos",
-        sha256: "406a2abbc3d3a11e045335603f5d720a5ea827df96e6251f526a8d04c74e5e4e",
+        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdc-x86_64-macos",
+        sha256: "bc3c36ba6a9847595adca2ef43cd0616159a5aeae02afcdff0dc29f67b4d4d2f",
         archive: "raw",
         member: null,
         env_prefix: "PYCDC",
@@ -50,15 +50,15 @@ const ASSETS = {
   "linux-arm64": {
     bins: {
       "pycdas": {
-        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.0/pycdas-aarch64-linux",
-        sha256: "9917c09d7ac4d428405011d6a04d71fe662a5d32dad828bc8974e0c3a58a2f21",
+        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdas-aarch64-linux",
+        sha256: "3d45013086cfc01fc75667177c9d5af733028015c80e9a2d8d06f077fc674940",
         archive: "raw",
         member: null,
         env_prefix: "PYCDAS",
       },
       "pycdc": {
-        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.0/pycdc-aarch64-linux",
-        sha256: "9c1ce5651b706f2a7e266d8b97f357cc4aff914048f7c2af25ff1386c5768b9d",
+        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdc-aarch64-linux",
+        sha256: "6d717ca386dfd03905c9d1adba2274672eed2a286c1345e19ad0f9fd9a4c5347",
         archive: "raw",
         member: null,
         env_prefix: "PYCDC",
@@ -68,15 +68,15 @@ const ASSETS = {
   "linux-x64": {
     bins: {
       "pycdas": {
-        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.0/pycdas-x86_64-linux",
-        sha256: "10522892c9f4def7ad16f5d71b684851b442d8d7385a9ff011a328c3eca69863",
+        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdas-x86_64-linux",
+        sha256: "04ee19b0f4b19472509f2da2e03857b9c66a680f265974318aa2a6557318cadd",
         archive: "raw",
         member: null,
         env_prefix: "PYCDAS",
       },
       "pycdc": {
-        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.0/pycdc-x86_64-linux",
-        sha256: "99bc1a8f0818ff265d49ff57e2168f931e9604fa7cd2823fcf7b34f118a139b6",
+        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdc-x86_64-linux",
+        sha256: "d6ddaca319e78f74f196a9533e5144d48c4a7fe7723b895d4c4428febe2c9be8",
         archive: "raw",
         member: null,
         env_prefix: "PYCDC",
@@ -86,15 +86,15 @@ const ASSETS = {
   "win32-arm64": {
     bins: {
       "pycdas": {
-        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.0/pycdas-aarch64-windows.exe",
-        sha256: "c56197ef6121bc7f4f7cd1e9337d0a534ff86a425356fe217d386f90857b635c",
+        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdas-aarch64-windows.exe",
+        sha256: "0fe56f0df6fe9a6557bbd008d5f044a2aaf348b1486f155501a59344381d6c24",
         archive: "raw",
         member: null,
         env_prefix: "PYCDAS",
       },
       "pycdc": {
-        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.0/pycdc-aarch64-windows.exe",
-        sha256: "fc4ea5f225d0cdcbafd345b78a80c006cfc9e2b578f73546909098fd2f8675b5",
+        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdc-aarch64-windows.exe",
+        sha256: "f16fdb7eba59ed0817d6b1935d66537a435bbe55a07c5aca9838dcd00f4eb924",
         archive: "raw",
         member: null,
         env_prefix: "PYCDC",
@@ -104,15 +104,15 @@ const ASSETS = {
   "win32-x64": {
     bins: {
       "pycdas": {
-        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.0/pycdas-x86_64-windows.exe",
-        sha256: "730d55ee02ef51fa90559973b3a009c60ccd46759a2a801964d4b311dcc79a80",
+        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdas-x86_64-windows.exe",
+        sha256: "41eab99c458dd78b0e581fa197a6e39d699338acd3c11d10e0a08670bec923ba",
         archive: "raw",
         member: null,
         env_prefix: "PYCDAS",
       },
       "pycdc": {
-        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.0/pycdc-x86_64-windows.exe",
-        sha256: "699c1b85af083e8c552cdc5a2283b18dccd62d9a44cfc8b67905166f7aebbd74",
+        url: "https://github.com/ejfkdev/pycdc/releases/download/v0.8.2/pycdc-x86_64-windows.exe",
+        sha256: "75cd88161a00b9a46a9a06ac1f7c9965d90d2df1f0f28c7d084a67799501fbdc",
         archive: "raw",
         member: null,
         env_prefix: "PYCDC",

@@ -1,6 +1,6 @@
 {
   "name": "@ejfkdev/jscd",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Reverse bytenode .jsc (V8 code cache) to JavaScript",
   "license": "MIT",
   "author": "ejfkdev",
