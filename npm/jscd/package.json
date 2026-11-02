@@ -7,7 +7,7 @@
   "homepage": "https://github.com/ejfkdev/jscd",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ejfkdev/jscd.git"
+    "url": "git+https://github.com/ejfkdev/release-automation.git"
   },
   "bugs": {
     "url": "https://github.com/ejfkdev/jscd/issues"

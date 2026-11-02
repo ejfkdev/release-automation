@@ -1161,7 +1161,7 @@ def render_npm(program: dict, version: str, record: dict) -> dict[Path, bytes]:
         "homepage": program.get("homepage", f"https://github.com/{program['repo']}"),
         "repository": {
             "type": "git",
-            "url": f"git+https://github.com/{program['repo']}.git",
+            "url": "git+https://github.com/ejfkdev/release-automation.git",
         },
         "bugs": {"url": f"https://github.com/{program['repo']}/issues"},
         "bin": {

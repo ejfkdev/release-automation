@@ -7,7 +7,7 @@
   "homepage": "https://github.com/ejfkdev/udf",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ejfkdev/udf.git"
+    "url": "git+https://github.com/ejfkdev/release-automation.git"
   },
   "bugs": {
     "url": "https://github.com/ejfkdev/udf/issues"

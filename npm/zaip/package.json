@@ -7,7 +7,7 @@
   "homepage": "https://github.com/ejfkdev/zaip",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ejfkdev/zaip.git"
+    "url": "git+https://github.com/ejfkdev/release-automation.git"
   },
   "bugs": {
     "url": "https://github.com/ejfkdev/zaip/issues"
