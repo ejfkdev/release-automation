@@ -56,6 +56,23 @@ def npm_latest(package: str) -> str | None:
     return version if isinstance(version, str) else None
 
 
+def npm_version_exists(package: str, version: str) -> bool:
+    url = f"https://registry.npmjs.org/{urllib.parse.quote(package, safe='')}"
+    request = urllib.request.Request(
+        url, headers={"User-Agent": "ejfkdev-release-automation"}
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            data = json.load(response)
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            return False
+        raise
+    except urllib.error.URLError:
+        return False
+    return version in (data.get("versions") or {})
+
+
 def winget_latest(program: dict) -> str | None:
     identifier = program["winget"]["id"]
     parts = identifier.split(".")

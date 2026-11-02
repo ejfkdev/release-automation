@@ -15,6 +15,10 @@ on:
         description: "Print commands without publishing"
         type: boolean
         default: true
+      validate_trust:
+        description: "Publish -trust.1 pre-releases via OIDC to validate trusted publishers"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -151,3 +155,29 @@ jobs:
             --program ${{ matrix.program }} \
             --version ${{ matrix.version }} \
             "${extra[@]}"
+
+  trust-validation:
+    needs: plan
+    if: ${{ inputs.validate_trust == true }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      - name: Show npm version
+        run: npm --version
+
+      - name: Validate trusted publishers
+        run: python3 tool/publish.py npm --all --trust-validation --yes

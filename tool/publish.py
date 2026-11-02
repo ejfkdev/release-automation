@@ -17,7 +17,9 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -150,6 +152,58 @@ def npm_publish(program: dict, version: str, yes: bool) -> None:
     note(f"{name}: published {package}@{version}")
 
 
+def npm_trust_validation(program: dict, version: str, yes: bool) -> None:
+    """Publish a pre-release via OIDC to validate a trusted publisher config."""
+    name = program["name"]
+    config = program.get("npm")
+    if not config:
+        note(f"{name}: no npm channel, skipping")
+        return
+    package = config["package"]
+    validation_version = f"{version}-trust.1"
+    if status.npm_version_exists(package, validation_version):
+        note(f"{name}: {package}@{validation_version} already exists, skipping")
+        return
+    source = ROOT / "npm" / package.split("/")[-1]
+    if not source.is_dir():
+        die(f"{name}: missing {source.relative_to(ROOT)} — run sync.py")
+    if not yes:
+        note(
+            f"dry run — would publish {package}@{validation_version} "
+            f"with tag trust-validation via OIDC"
+        )
+        return
+    if not os.environ.get("ACTIONS_ID_TOKEN_REQUEST_URL"):
+        die(f"{name}: OIDC is not available; run this from GitHub Actions")
+    with tempfile.TemporaryDirectory(prefix="npm-trust-") as tmp:
+        target = Path(tmp) / source.name
+        shutil.copytree(source, target)
+        manifest = json.loads((target / "package.json").read_text())
+        manifest["version"] = validation_version
+        (target / "package.json").write_text(
+            json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
+        )
+        env = os.environ.copy()
+        env.pop("NODE_AUTH_TOKEN", None)
+        env.pop("NPM_TOKEN", None)
+        result = subprocess.run(
+            [
+                "npm",
+                "publish",
+                "--access",
+                "public",
+                "--tag",
+                "trust-validation",
+                "--registry=https://registry.npmjs.org/",
+            ],
+            cwd=target,
+            env=env,
+        )
+        if result.returncode != 0:
+            die(f"{name}: npm publish failed for {validation_version}")
+    note(f"{name}: published {package}@{validation_version} (trust-validation)")
+
+
 def winget_publish(
     program: dict, version: str, record: dict, yes: bool
 ) -> None:
@@ -178,6 +232,11 @@ def bundle_only(program: dict, version: str, out: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("channel", choices=("npm", "winget", "bundle"))
+    parser.add_argument(
+        "--trust-validation",
+        action="store_true",
+        help="publish a <version>-trust.1 pre-release via OIDC to validate trusted publishing",
+    )
     parser.add_argument("--program", action="append", default=[])
     parser.add_argument("--all", action="store_true", help="all catalog programs")
     parser.add_argument("--version", help="require this generated version")
@@ -201,7 +260,9 @@ def main() -> None:
             continue
         record = record_for(program, checksums, args.version)
         version = record["version"]
-        if args.channel == "npm":
+        if args.trust_validation:
+            npm_trust_validation(program, version, args.yes)
+        elif args.channel == "npm":
             npm_publish(program, version, args.yes)
         elif args.channel == "winget":
             winget_publish(program, version, record, args.yes)
