@@ -198,9 +198,15 @@ the tool only assumes public release assets.
 
 | Secret | Used by | Notes |
 | --- | --- | --- |
-| `NPM_TOKEN` | npm job | Granular token with publish permission and 2FA bypass, or a logged-in `npm` session locally |
 | `WINGET_TOKEN` | WinGet job | Classic PAT with `public_repo`; used for the fork/PR and for uploading payload bundles to the program release |
 | `GITHUB_TOKEN` | reconcile/plan | Automatic; reads public releases and commits generated files |
+
+npm publishing uses **OIDC trusted publishing**: the `publish` workflow requests
+a short-lived GitHub OIDC token (`id-token: write`) and npm verifies the
+`owner/repo` + `publish.yml` configuration registered on each package. No npm
+token secret is stored, and every publish gets a provenance attestation. Node 24
+(npm >= 11.5.1) is required. Locally, a logged-in `npm` session or `NPM_TOKEN`
+still works as a fallback.
 
 WinGet submission uses the GitHub REST API through the `gh` CLI
 (`tool/submit_winget.py`): it syncs the fork's `master`, creates a branch from
@@ -226,15 +232,16 @@ versions publish normally.
   `npm pack --dry-run` for every package.
 - `reconcile.yml` runs daily and on demand: refreshes hashes/manifests, verifies
   them, prints the drift table, and commits changes.
-- `auto-publish-npm.yml` runs after every successful reconcile (and on demand):
-  publishes npm packages whose registry version is behind the generated catalog.
-  It skips up-to-date packages and packages still in npm's first-publish review
-  (`0.0.0-stage`). Authentication currently uses `NPM_TOKEN`; OIDC trusted
-  publishing is the planned replacement when that token expires.
-- `publish.yml` is manual. It refreshes and commits first, then publishes the
-  selected channels. `dry_run` defaults to `true`; set it to `false` to publish.
-  Inputs: `programs` (`all` or comma-separated names), `channels`
-  (`npm`, `winget`), `dry_run`.
+- `publish.yml` runs automatically after every successful reconcile (via
+  `workflow_run`) and on demand. On the automatic path it publishes both
+  channels for every program whose registry version is behind the generated
+  catalog; up-to-date packages and packages still in npm's first-publish review
+  (`0.0.0-stage`) are skipped, and open WinGet PRs are not duplicated. Manually
+  it refreshes and commits first, then publishes the selected channels;
+  `dry_run` defaults to `true`; set it to `false` to publish. Inputs: `programs`
+  (`all` or comma-separated names), `channels` (`npm`, `winget`), `dry_run`,
+  `validate_trust` (publishes `<version>-trust.1` pre-releases via OIDC to
+  validate trusted-publisher configs).
 
 ## Notes and limitations
 

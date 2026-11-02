@@ -111,8 +111,16 @@ def npm_publish(program: dict, version: str, yes: bool) -> None:
 
     env = os.environ.copy()
     token = env.get("NPM_TOKEN") or env.get("NODE_AUTH_TOKEN")
+    # Trusted publishing: npm exchanges the Actions OIDC token itself, so no
+    # user token may be present (a stale NPM_TOKEN would override OIDC).
+    oidc = bool(env.get("ACTIONS_ID_TOKEN_REQUEST_URL")) and not token
     temporary = None
-    if token and not env.get("NODE_AUTH_TOKEN"):
+    if oidc:
+        env.pop("NODE_AUTH_TOKEN", None)
+        env.pop("NPM_TOKEN", None)
+        env.pop("NPM_CONFIG_USERCONFIG", None)
+        note(f"{name}: using npm trusted publishing (OIDC)")
+    elif token and not env.get("NODE_AUTH_TOKEN"):
         handle = tempfile.NamedTemporaryFile(
             "w", prefix="npmrc-", delete=False, encoding="utf-8"
         )
@@ -122,7 +130,7 @@ def npm_publish(program: dict, version: str, yes: bool) -> None:
         env["NPM_TOKEN"] = token
         env["NPM_CONFIG_USERCONFIG"] = temporary
     try:
-        if not token:
+        if not token and not oidc:
             check = subprocess.run(
                 ["npm", "whoami", "--registry=https://registry.npmjs.org/"],
                 capture_output=True,
@@ -130,7 +138,8 @@ def npm_publish(program: dict, version: str, yes: bool) -> None:
             )
             if check.returncode != 0:
                 die(
-                    f"{name}: not logged in to npmjs. Set NPM_TOKEN or run "
+                    f"{name}: not logged in to npmjs. Set NPM_TOKEN, run in "
+                    f"GitHub Actions with id-token: write, or run "
                     f"`npm login --registry=https://registry.npmjs.org/`"
                 )
         result = subprocess.run(
