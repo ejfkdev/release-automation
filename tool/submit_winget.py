@@ -181,12 +181,13 @@ def ensure_bundle(program: dict, version: str, record: dict, arch: str) -> None:
     note(f"{name}: uploaded {entry['name']}")
 
 
-def find_open_pr(
-    owner: str, fork: str, identifier: str, version: str
-) -> str | None:
-    """Return an open PR URL for this package/version, if one exists."""
-    prefix = f"{identifier}-{version}-"
-    refs = gh_api(f"repos/{fork}/git/matching-refs/heads/{prefix}")
+def find_open_pr(owner: str, fork: str, identifier: str) -> str | None:
+    """Return an open PR URL for this package, at any version, if one exists.
+
+    WinGet allows only one open submission per package identifier, so a PR for
+    an older version still blocks a newer one.
+    """
+    refs = gh_api(f"repos/{fork}/git/matching-refs/heads/{identifier}-")
     if isinstance(refs, list):
         for ref in refs:
             branch = ref.get("ref", "").rsplit("/", 1)[-1]
@@ -198,13 +199,12 @@ def find_open_pr(
             if isinstance(pulls, list) and pulls:
                 return pulls[0].get("html_url")
     query = urllib.parse.quote(
-        f'repo:{UPSTREAM} is:pr is:open "{identifier}" "{version}"'
+        f'repo:{UPSTREAM} is:pr is:open "{identifier}"'
     )
     found = gh_api(f"search/issues?q={query}&per_page=10")
     if isinstance(found, dict):
         for item in found.get("items", []):
-            title = item.get("title", "")
-            if identifier in title and version in title:
+            if identifier in item.get("title", ""):
                 return item.get("html_url")
     return None
 
@@ -227,7 +227,7 @@ def submit(program: dict, version: str, record: dict, yes: bool) -> None:
     if not isinstance(owner, dict):
         die("cannot resolve the authenticated GitHub user")
     fork = f"{owner['login']}/{UPSTREAM.split('/')[1]}"
-    existing = find_open_pr(owner["login"], fork, identifier, version)
+    existing = find_open_pr(owner["login"], fork, identifier)
     if existing:
         note(f"{name}: open WinGet PR already exists: {existing}")
         return
