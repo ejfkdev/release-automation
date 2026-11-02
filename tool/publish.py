@@ -81,6 +81,12 @@ def npm_publish(program: dict, version: str, yes: bool) -> None:
     if current == version:
         note(f"{name}: npm already has {package}@{version}, skipping")
         return
+    if current == "0.0.0-stage":
+        note(
+            f"{name}: npm package is awaiting first-publish review "
+            f"(0.0.0-stage); skipping {version}"
+        )
+        return
     if current and status.version_key(current) > status.version_key(version):
         die(f"{name}: npm has newer {current}; refusing to publish {version}")
 

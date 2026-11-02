@@ -225,7 +225,12 @@ versions publish normally.
 - `ci.yml` runs on push/PR: Python syntax, `sync.py --check`, YAML parse, and
   `npm pack --dry-run` for every package.
 - `reconcile.yml` runs daily and on demand: refreshes hashes/manifests, verifies
-  them, prints the drift table, and commits changes. It never publishes.
+  them, prints the drift table, and commits changes.
+- `auto-publish-npm.yml` runs after every successful reconcile (and on demand):
+  publishes npm packages whose registry version is behind the generated catalog.
+  It skips up-to-date packages and packages still in npm's first-publish review
+  (`0.0.0-stage`). Authentication currently uses `NPM_TOKEN`; OIDC trusted
+  publishing is the planned replacement when that token expires.
 - `publish.yml` is manual. It refreshes and commits first, then publishes the
   selected channels. `dry_run` defaults to `true`; set it to `false` to publish.
   Inputs: `programs` (`all` or comma-separated names), `channels`

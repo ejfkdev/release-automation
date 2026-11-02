@@ -60,6 +60,12 @@ catalog 的完整字段、归档 `member`、多命令 `bundle` 的写法见英�
 | `WINGET_TOKEN` | WinGet 提 PR；classic PAT，至少 `public_repo`。也用于上传多命令 payload 到各项目 release |
 | `GITHUB_TOKEN` | Actions 自动提供；读取公开 release、提交生成物 |
 
+`reconcile.yml` 每天更新生成物并提交；成功后 `auto-publish-npm.yml` 会自动发布 npm
+落后版本（跳过已是最新、以及仍在 npm 首次发布审核中的 `0.0.0-stage` 占位包）。
+WinGet 仍然走手动 `publish.yml`。`NPM_TOKEN` 目前是 90 天 granular token；
+到期前需要换成 OIDC Trusted Publishing（已为 `dj`、`avdroot`、`dae`、`jscd`、`oss`
+配好 trusted publisher，其余包后续补）。
+
 WinGet 通过 `gh` 调 GitHub REST API 直接提交 PR（`tool/submit_winget.py`）：先同步 fork 的
 `master`，从 upstream 建分支，把 3 个 YAML 写到 `manifests/...`，再用 upstream 模板开 PR。
 不需要 Windows runner 或 wingetcreate。本地只要 `gh auth login` 过就能提交，不需要
