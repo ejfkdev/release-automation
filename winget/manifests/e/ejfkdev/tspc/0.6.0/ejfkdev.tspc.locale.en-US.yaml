@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.12.0.schema.json
 PackageIdentifier: ejfkdev.tspc
-PackageVersion: 0.5.7
+PackageVersion: 0.6.0
 PackageLocale: en-US
 Publisher: ejfkdev
 PublisherUrl: "https://github.com/ejfkdev"
@@ -8,7 +8,7 @@ PublisherSupportUrl: "https://github.com/ejfkdev/typespec-rs/issues"
 PackageName: TypeSpec Compiler (tspc)
 PackageUrl: "https://github.com/ejfkdev/typespec-rs"
 License: MIT
-LicenseUrl: "https://github.com/ejfkdev/typespec-rs/blob/v0.5.7/LICENSE"
+LicenseUrl: "https://github.com/ejfkdev/typespec-rs/blob/v0.6.0/LICENSE"
 ShortDescription: TypeSpec compiler CLI
 Description: |-
   tspc is the TypeSpec compiler CLI: a Rust implementation of the TypeSpec type system with a parser, type checker, and emitter.
@@ -17,6 +17,6 @@ Tags:
   - compiler
   - type-system
   - cli
-ReleaseNotesUrl: "https://github.com/ejfkdev/typespec-rs/releases/tag/v0.5.7"
+ReleaseNotesUrl: "https://github.com/ejfkdev/typespec-rs/releases/tag/v0.6.0"
 ManifestType: defaultLocale
 ManifestVersion: 1.12.0

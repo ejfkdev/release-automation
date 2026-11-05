@@ -14,8 +14,8 @@ const ASSETS = {
   "darwin-arm64": {
     bins: {
       "tspc": {
-        url: "https://github.com/ejfkdev/typespec-rs/releases/download/v0.5.7/tspc-aarch64-apple-darwin",
-        sha256: "4f0245902d96b6e5cc27ee0b39c295d32a83ed295547d93b3d9d94284cc3aeb7",
+        url: "https://github.com/ejfkdev/typespec-rs/releases/download/v0.6.0/tspc-aarch64-apple-darwin",
+        sha256: "b1d80f9fd07d8eadb867f367ede7960cbfccf0c9669db2bed92ed891767b1199",
         archive: "raw",
         member: null,
         env_prefix: "TSPC",
@@ -25,8 +25,8 @@ const ASSETS = {
   "darwin-x64": {
     bins: {
       "tspc": {
-        url: "https://github.com/ejfkdev/typespec-rs/releases/download/v0.5.7/tspc-x86_64-apple-darwin",
-        sha256: "f64c3e23389cd6829467525d443c2ff9cdba188e0ac8d85c60737594c346f65e",
+        url: "https://github.com/ejfkdev/typespec-rs/releases/download/v0.6.0/tspc-x86_64-apple-darwin",
+        sha256: "73e19d70823aac5014b931794fd601bb7e9fe44141b6fd776aeef69e5024528e",
         archive: "raw",
         member: null,
         env_prefix: "TSPC",
@@ -36,8 +36,8 @@ const ASSETS = {
   "linux-arm64": {
     bins: {
       "tspc": {
-        url: "https://github.com/ejfkdev/typespec-rs/releases/download/v0.5.7/tspc-aarch64-unknown-linux-gnu",
-        sha256: "d4b9c717b18f160184fe9a3ab02a3c546d557cc4c691a0718dc4d797c81eb73d",
+        url: "https://github.com/ejfkdev/typespec-rs/releases/download/v0.6.0/tspc-aarch64-unknown-linux-gnu",
+        sha256: "967c20ca329efedc2b26671631d990020a714ae78a4f185fd13d87c498484323",
         archive: "raw",
         member: null,
         env_prefix: "TSPC",
@@ -47,8 +47,8 @@ const ASSETS = {
   "linux-x64": {
     bins: {
       "tspc": {
-        url: "https://github.com/ejfkdev/typespec-rs/releases/download/v0.5.7/tspc-x86_64-unknown-linux-gnu",
-        sha256: "4e7d68649dfb1590733f7cf10c4dc9de8703dc9f99264f32fc0e22cfc63ae25c",
+        url: "https://github.com/ejfkdev/typespec-rs/releases/download/v0.6.0/tspc-x86_64-unknown-linux-gnu",
+        sha256: "732aaadd73f3e9bff6b6ab0d41c84326c9dce69639f7508c24e8a0e4578afcac",
         archive: "raw",
         member: null,
         env_prefix: "TSPC",
@@ -58,8 +58,8 @@ const ASSETS = {
   "win32-arm64": {
     bins: {
       "tspc": {
-        url: "https://github.com/ejfkdev/typespec-rs/releases/download/v0.5.7/tspc-aarch64-pc-windows-msvc.exe",
-        sha256: "29bcc5a09b1887676f5694897c84c0c8c11c3c051f777a4ee36e09acd3e4a156",
+        url: "https://github.com/ejfkdev/typespec-rs/releases/download/v0.6.0/tspc-aarch64-pc-windows-msvc.exe",
+        sha256: "7a565a7e2148e4c1f97203e9bfa82cf41185027e7db7634b1daf8c34a6e8bbeb",
         archive: "raw",
         member: null,
         env_prefix: "TSPC",
@@ -69,8 +69,8 @@ const ASSETS = {
   "win32-x64": {
     bins: {
       "tspc": {
-        url: "https://github.com/ejfkdev/typespec-rs/releases/download/v0.5.7/tspc-x86_64-pc-windows-msvc.exe",
-        sha256: "04f26f54f5800a90ff78d4edb36c6d4a4bce718c76e63d3457454bf713e80a94",
+        url: "https://github.com/ejfkdev/typespec-rs/releases/download/v0.6.0/tspc-x86_64-pc-windows-msvc.exe",
+        sha256: "15a725f8446385ee87280795e949347810017aa4b523e9edf7a9a36dc10b6ec9",
         archive: "raw",
         member: null,
         env_prefix: "TSPC",

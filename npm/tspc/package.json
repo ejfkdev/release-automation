@@ -1,6 +1,6 @@
 {
   "name": "@ejfkdev/tspc",
-  "version": "0.5.7",
+  "version": "0.6.0",
   "description": "TypeSpec compiler CLI",
   "license": "MIT",
   "author": "ejfkdev",
