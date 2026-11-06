@@ -14,8 +14,8 @@ const ASSETS = {
   "darwin-arm64": {
     bins: {
       "jcdc": {
-        url: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.3/jcdc-v0.1.3-macos-arm64",
-        sha256: "b5e679e894045ef26bca483fe836c16a978e735773eb598134b69fd255d3ce6b",
+        url: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.4/jcdc-v0.1.4-macos-arm64",
+        sha256: "271a8816a6dead0e3131ac563bb7377a7e9f16a747ef15af5b219a43336c2685",
         archive: "raw",
         member: null,
         env_prefix: "JCDC",
@@ -25,8 +25,8 @@ const ASSETS = {
   "darwin-x64": {
     bins: {
       "jcdc": {
-        url: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.3/jcdc-v0.1.3-macos-amd64",
-        sha256: "0965b775ac33fa03e116ac1bc7bf4d064870760465e2f82d777d6000b6312d87",
+        url: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.4/jcdc-v0.1.4-macos-amd64",
+        sha256: "45ca66e2091d0a104698a569a88120305ce998ebe63dc7690343cd196007236e",
         archive: "raw",
         member: null,
         env_prefix: "JCDC",
@@ -36,8 +36,8 @@ const ASSETS = {
   "linux-arm64": {
     bins: {
       "jcdc": {
-        url: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.3/jcdc-v0.1.3-linux-arm64",
-        sha256: "b030efeb47ef5bfe97b4c9990247e7d7b121d22a97242059a9baf72c2fe6772c",
+        url: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.4/jcdc-v0.1.4-linux-arm64",
+        sha256: "a3672f54b5605e2f635ff3e70b993e68ad4bbff022ef24fa3c004a3d6c72553c",
         archive: "raw",
         member: null,
         env_prefix: "JCDC",
@@ -47,8 +47,8 @@ const ASSETS = {
   "linux-x64": {
     bins: {
       "jcdc": {
-        url: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.3/jcdc-v0.1.3-linux-amd64",
-        sha256: "69206099b070a4acb8bc3b79f751a92676e4578b9a778678b32ef75802874ff1",
+        url: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.4/jcdc-v0.1.4-linux-amd64",
+        sha256: "9557c389ab858aca1bcf2574fd54231674c66e6ea5f448f3cf4e9e139ca8e5a1",
         archive: "raw",
         member: null,
         env_prefix: "JCDC",
@@ -58,8 +58,8 @@ const ASSETS = {
   "win32-arm64": {
     bins: {
       "jcdc": {
-        url: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.3/jcdc-v0.1.3-windows-arm64.exe",
-        sha256: "12436cf9f2189763f27a4695139bc1ab04ddf05cda71707a74e5b8c231a406bd",
+        url: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.4/jcdc-v0.1.4-windows-arm64.exe",
+        sha256: "84887ee3d1608b9b54c08bef411a2bcf6c8655e27b7c72dd67fbba5394f948d5",
         archive: "raw",
         member: null,
         env_prefix: "JCDC",
@@ -69,8 +69,8 @@ const ASSETS = {
   "win32-x64": {
     bins: {
       "jcdc": {
-        url: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.3/jcdc-v0.1.3-windows-amd64.exe",
-        sha256: "eab113bd8d3ad64d7171e19a516eb41c4293b760803ed08021104677d079e4f7",
+        url: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.4/jcdc-v0.1.4-windows-amd64.exe",
+        sha256: "3d248f52e945bac4661b95de91be30a61b1da0380edf7c9b4bbee0f222555ad7",
         archive: "raw",
         member: null,
         env_prefix: "JCDC",
