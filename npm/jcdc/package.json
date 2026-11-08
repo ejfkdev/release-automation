@@ -1,6 +1,6 @@
 {
   "name": "@ejfkdev/jcdc",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Java class file decompiler",
   "license": "MIT",
   "author": "ejfkdev",

@@ -196,38 +196,38 @@ sha256 = "b719a71ecbdcb2944f5f1cb3ea0aef22f9ead0f5cec1b16701e3f77a403ae090"
 size = 2477884
 
 ["jcdc"]
-version = "0.1.4"
-tag = "v0.1.4"
+version = "0.1.5"
+tag = "v0.1.5"
 
 [jcdc.targets."aarch64-apple-darwin"."jcdc"]
-name = "jcdc-v0.1.4-macos-arm64"
-sha256 = "271a8816a6dead0e3131ac563bb7377a7e9f16a747ef15af5b219a43336c2685"
-size = 4843760
+name = "jcdc-v0.1.5-macos-arm64"
+sha256 = "645056593ba13be4e722f6c8fe12e4bbe41d2b96c9c2a078af294531e748eec8"
+size = 4843776
 
 [jcdc.targets."aarch64-pc-windows-msvc"."jcdc"]
-name = "jcdc-v0.1.4-windows-arm64.exe"
-sha256 = "84887ee3d1608b9b54c08bef411a2bcf6c8655e27b7c72dd67fbba5394f948d5"
-size = 1334784
+name = "jcdc-v0.1.5-windows-arm64.exe"
+sha256 = "ff4f4a273d3f7729862eae0109c9aeb38419345eaf24144237424d0fb16d404f"
+size = 1335808
 
 [jcdc.targets."aarch64-unknown-linux-gnu"."jcdc"]
-name = "jcdc-v0.1.4-linux-arm64"
-sha256 = "a3672f54b5605e2f635ff3e70b993e68ad4bbff022ef24fa3c004a3d6c72553c"
-size = 1370040
+name = "jcdc-v0.1.5-linux-arm64"
+sha256 = "ef982f0367f39c6e3fdc7bdeae9e22c191a7fa5556afe55223b889c4496372d3"
+size = 1371604
 
 [jcdc.targets."x86_64-apple-darwin"."jcdc"]
-name = "jcdc-v0.1.4-macos-amd64"
-sha256 = "45ca66e2091d0a104698a569a88120305ce998ebe63dc7690343cd196007236e"
-size = 5128088
+name = "jcdc-v0.1.5-macos-amd64"
+sha256 = "1b973f6c9b19d09c32b4b0d6267e8ea394858f61fad2dbf36bfc045f00b3a58e"
+size = 5132176
 
 [jcdc.targets."x86_64-pc-windows-msvc"."jcdc"]
-name = "jcdc-v0.1.4-windows-amd64.exe"
-sha256 = "3d248f52e945bac4661b95de91be30a61b1da0380edf7c9b4bbee0f222555ad7"
-size = 1521152
+name = "jcdc-v0.1.5-windows-amd64.exe"
+sha256 = "7d1cf659bd9297e25ce7aaa14c1390e4ecd34d8fcedbbe372a9925b16dcf1ffd"
+size = 1524224
 
 [jcdc.targets."x86_64-unknown-linux-gnu"."jcdc"]
-name = "jcdc-v0.1.4-linux-amd64"
-sha256 = "9557c389ab858aca1bcf2574fd54231674c66e6ea5f448f3cf4e9e139ca8e5a1"
-size = 1683384
+name = "jcdc-v0.1.5-linux-amd64"
+sha256 = "fa7d58e4770b97f8cdad083a48f95fb2df1d8dc48cbadcfa44016a2cd1c7acf0"
+size = 1685648
 
 ["jd"]
 version = "1.0.0"

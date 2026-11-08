@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+PackageIdentifier: ejfkdev.jcdc
+PackageVersion: 0.1.5
+InstallerType: portable
+Commands:
+  - jcdc
+UpgradeBehavior: install
+Installers:
+  - Architecture: arm64
+    InstallerUrl: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.5/jcdc-v0.1.5-windows-arm64.exe"
+    InstallerSha256: FF4F4A273D3F7729862EAE0109C9AEB38419345EAF24144237424D0FB16D404F
+  - Architecture: x64
+    InstallerUrl: "https://github.com/ejfkdev/jcdc/releases/download/v0.1.5/jcdc-v0.1.5-windows-amd64.exe"
+    InstallerSha256: 7D1CF659BD9297E25CE7AAA14C1390E4ECD34D8FCEDBBE372A9925B16DCF1FFD
+ManifestType: installer
+ManifestVersion: 1.12.0
