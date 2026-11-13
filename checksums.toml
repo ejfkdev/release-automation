@@ -264,38 +264,38 @@ sha256 = "05cba23090eb23e6bbc4d3d1ec3faea43f194b58e058d92e55e58fb1a5dcad28"
 size = 3009840
 
 ["jscd"]
-version = "0.3.1"
-tag = "v0.3.1"
+version = "0.3.3"
+tag = "v0.3.3"
 
 [jscd.targets."aarch64-apple-darwin"."jscd"]
-name = "jscd-v0.3.1-macos-arm64"
-sha256 = "e83a181ec52164acaf63487118b5a461a6854d9f0463f6f59dfd2106f050c8c3"
-size = 6771312
+name = "jscd-v0.3.3-macos-arm64"
+sha256 = "e9d602ee0567e245fbd96075589c31d6da91d66bd194448308837ff0daed32b8"
+size = 6824864
 
 [jscd.targets."aarch64-pc-windows-msvc"."jscd"]
-name = "jscd-v0.3.1-windows-arm64.exe"
-sha256 = "9418bd4f475b9520a37d8b0bb606ff120e09e0922587b3d175d5b9174db2b200"
-size = 925696
+name = "jscd-v0.3.3-windows-arm64.exe"
+sha256 = "19c5b8e562eb84d283970df042ffcf5d1d0ca953fedae8acf15e9373c0809f69"
+size = 949248
 
 [jscd.targets."aarch64-unknown-linux-gnu"."jscd"]
-name = "jscd-v0.3.1-linux-arm64"
-sha256 = "ad8d702c8f862c55bd8c121c95785f6fb50d2fce67705fb9be5ee7a2fea32c7a"
-size = 993624
+name = "jscd-v0.3.3-linux-arm64"
+sha256 = "f7d7fe9de6673fec342de297ebad971647e7d33eafe7a88cae9aa5d18c456758"
+size = 1018132
 
 [jscd.targets."x86_64-apple-darwin"."jscd"]
-name = "jscd-v0.3.1-macos-amd64"
-sha256 = "07a6d1caeed4bb76b479b428f030d53dd2dd28012f7d805f004203ec92b300f2"
-size = 7009960
+name = "jscd-v0.3.3-macos-amd64"
+sha256 = "8859add297088a06f6eaa69b520d20b7f9ad1ef39962fd0850c524af416cf3ee"
+size = 7048600
 
 [jscd.targets."x86_64-pc-windows-msvc"."jscd"]
-name = "jscd-v0.3.1-windows-amd64.exe"
-sha256 = "1b7ccade1f09959fa551d9625142c0a513e52249ff6cac07c89227954ae5f36e"
-size = 1060864
+name = "jscd-v0.3.3-windows-amd64.exe"
+sha256 = "16e868dfcdcbcc0d7d836b13ce404f79742629adfab4a83109cfd2cd369eade9"
+size = 1080320
 
 [jscd.targets."x86_64-unknown-linux-gnu"."jscd"]
-name = "jscd-v0.3.1-linux-amd64"
-sha256 = "3158d369f3221dea1af15f5af0deee6bb6b365ef256928cb03cb78153166651b"
-size = 1199060
+name = "jscd-v0.3.3-linux-amd64"
+sha256 = "37a47a41c2cdef0787f7e00bf3fac38ac2a2df9bf90cbcefc0aa70b1d3695d65"
+size = 1212344
 
 ["oss"]
 version = "0.2.5"
