@@ -1,6 +1,6 @@
 {
   "name": "@ejfkdev/udf",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "description": "Extract files from disk images, container archives, and filesystems",
   "license": "MIT",
   "author": "ejfkdev",

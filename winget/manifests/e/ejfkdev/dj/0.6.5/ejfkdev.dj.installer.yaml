@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+PackageIdentifier: ejfkdev.dj
+PackageVersion: 0.6.5
+InstallerType: portable
+Commands:
+  - dj
+UpgradeBehavior: install
+Installers:
+  - Architecture: arm64
+    InstallerUrl: "https://github.com/ejfkdev/dj/releases/download/v0.6.5/dj-windows-arm64.exe"
+    InstallerSha256: 9E20DA778F4B493E26881ED3AAC803008E1068FF89BBE1455216788ACB0003E6
+  - Architecture: x64
+    InstallerUrl: "https://github.com/ejfkdev/dj/releases/download/v0.6.5/dj-windows-amd64.exe"
+    InstallerSha256: 68BC056C61B6B2F915FC3A8B0BCBD2A3B2EAEB75895E252545CFBBF7C00969BD
+ManifestType: installer
+ManifestVersion: 1.12.0

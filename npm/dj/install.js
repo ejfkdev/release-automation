@@ -14,8 +14,8 @@ const ASSETS = {
   "darwin-arm64": {
     bins: {
       "dj": {
-        url: "https://github.com/ejfkdev/dj/releases/download/v0.6.4/dj-darwin-arm64",
-        sha256: "1491f0b650f95d746b246f9d2b86dddeacc9394ae193feec749b033913815028",
+        url: "https://github.com/ejfkdev/dj/releases/download/v0.6.5/dj-darwin-arm64",
+        sha256: "0cb77ef383c0be79dd04b2acad894c12f817c47c61bdc840e252c309167796bb",
         archive: "raw",
         member: null,
         env_prefix: "DJ",
@@ -25,8 +25,8 @@ const ASSETS = {
   "darwin-x64": {
     bins: {
       "dj": {
-        url: "https://github.com/ejfkdev/dj/releases/download/v0.6.4/dj-darwin-amd64",
-        sha256: "784b753f09e26f70496f98bd8a8b7cba87bdf568a3e85732289b118efbd8c80c",
+        url: "https://github.com/ejfkdev/dj/releases/download/v0.6.5/dj-darwin-amd64",
+        sha256: "e8c039efc33b6e4623efb862e6fddccd114283b3bb9a920d115928c55c0be6ee",
         archive: "raw",
         member: null,
         env_prefix: "DJ",
@@ -36,8 +36,8 @@ const ASSETS = {
   "linux-arm64": {
     bins: {
       "dj": {
-        url: "https://github.com/ejfkdev/dj/releases/download/v0.6.4/dj-linux-arm64",
-        sha256: "e6035d5d4d0ca1025fee21108c34ffb2c567b8abd8fbb88915a4d231cd983eec",
+        url: "https://github.com/ejfkdev/dj/releases/download/v0.6.5/dj-linux-arm64",
+        sha256: "d4e468992341038487229c3448ceec98fb6d46ced88cfe0a7c490662a5e05724",
         archive: "raw",
         member: null,
         env_prefix: "DJ",
@@ -47,8 +47,8 @@ const ASSETS = {
   "linux-x64": {
     bins: {
       "dj": {
-        url: "https://github.com/ejfkdev/dj/releases/download/v0.6.4/dj-linux-amd64",
-        sha256: "97024cc9f70d03299202554babce1cfd50e2126ebf4e8e0ee2932b9c7cbd5989",
+        url: "https://github.com/ejfkdev/dj/releases/download/v0.6.5/dj-linux-amd64",
+        sha256: "028920de1e0c00992acb4912828df9429d4799e9a400416015895cbebdd5e2be",
         archive: "raw",
         member: null,
         env_prefix: "DJ",
@@ -58,8 +58,8 @@ const ASSETS = {
   "win32-arm64": {
     bins: {
       "dj": {
-        url: "https://github.com/ejfkdev/dj/releases/download/v0.6.4/dj-windows-arm64.exe",
-        sha256: "07e771d04a27fb9a7d0fdf4f1323d4168a8fe0d3293f35f2dcc2d2f8924994c3",
+        url: "https://github.com/ejfkdev/dj/releases/download/v0.6.5/dj-windows-arm64.exe",
+        sha256: "9e20da778f4b493e26881ed3aac803008e1068ff89bbe1455216788acb0003e6",
         archive: "raw",
         member: null,
         env_prefix: "DJ",
@@ -69,8 +69,8 @@ const ASSETS = {
   "win32-x64": {
     bins: {
       "dj": {
-        url: "https://github.com/ejfkdev/dj/releases/download/v0.6.4/dj-windows-amd64.exe",
-        sha256: "a359fbf873f03589b7f478815f6a85094dbb952e024b202e4aeb0c0bfdce45ff",
+        url: "https://github.com/ejfkdev/dj/releases/download/v0.6.5/dj-windows-amd64.exe",
+        sha256: "68bc056c61b6b2f915fc3a8b0bcbd2a3b2eaeb75895e252545cfbbf7c00969bd",
         archive: "raw",
         member: null,
         env_prefix: "DJ",

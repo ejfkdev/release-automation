@@ -133,38 +133,38 @@ sha256 = "81b912dcf355b3fb7c44fee8bf0510710a5dc0ce982f7abf28917bdfdf6a0f37"
 size = 4520832
 
 ["dj"]
-version = "0.6.4"
-tag = "v0.6.4"
+version = "0.6.5"
+tag = "v0.6.5"
 
 [dj.targets."aarch64-apple-darwin"."dj"]
 name = "dj-darwin-arm64"
-sha256 = "1491f0b650f95d746b246f9d2b86dddeacc9394ae193feec749b033913815028"
-size = 11571266
+sha256 = "0cb77ef383c0be79dd04b2acad894c12f817c47c61bdc840e252c309167796bb"
+size = 11838674
 
 [dj.targets."aarch64-pc-windows-msvc"."dj"]
 name = "dj-windows-arm64.exe"
-sha256 = "07e771d04a27fb9a7d0fdf4f1323d4168a8fe0d3293f35f2dcc2d2f8924994c3"
-size = 11357184
+sha256 = "9e20da778f4b493e26881ed3aac803008e1068ff89bbe1455216788acb0003e6"
+size = 11618816
 
 [dj.targets."aarch64-unknown-linux-gnu"."dj"]
 name = "dj-linux-arm64"
-sha256 = "e6035d5d4d0ca1025fee21108c34ffb2c567b8abd8fbb88915a4d231cd983eec"
-size = 4110992
+sha256 = "d4e468992341038487229c3448ceec98fb6d46ced88cfe0a7c490662a5e05724"
+size = 4190776
 
 [dj.targets."x86_64-apple-darwin"."dj"]
 name = "dj-darwin-amd64"
-sha256 = "784b753f09e26f70496f98bd8a8b7cba87bdf568a3e85732289b118efbd8c80c"
-size = 12472976
+sha256 = "e8c039efc33b6e4623efb862e6fddccd114283b3bb9a920d115928c55c0be6ee"
+size = 12767312
 
 [dj.targets."x86_64-pc-windows-msvc"."dj"]
 name = "dj-windows-amd64.exe"
-sha256 = "a359fbf873f03589b7f478815f6a85094dbb952e024b202e4aeb0c0bfdce45ff"
-size = 4884480
+sha256 = "68bc056c61b6b2f915fc3a8b0bcbd2a3b2eaeb75895e252545cfbbf7c00969bd"
+size = 4779520
 
 [dj.targets."x86_64-unknown-linux-gnu"."dj"]
 name = "dj-linux-amd64"
-sha256 = "97024cc9f70d03299202554babce1cfd50e2126ebf4e8e0ee2932b9c7cbd5989"
-size = 4746180
+sha256 = "028920de1e0c00992acb4912828df9429d4799e9a400416015895cbebdd5e2be"
+size = 4642980
 
 ["dns"]
 version = "0.3.0"
@@ -573,38 +573,38 @@ sha256 = "732aaadd73f3e9bff6b6ab0d41c84326c9dce69639f7508c24e8a0e4578afcac"
 size = 862672
 
 ["udf"]
-version = "0.7.8"
-tag = "v0.7.8"
+version = "0.7.9"
+tag = "v0.7.9"
 
 [udf.targets."aarch64-apple-darwin"."udf"]
-name = "udf_v0.7.8_darwin_arm64.tar.gz"
-sha256 = "ddb69a2ce375d0b6f3e161024b7170255d7356e485847672a79ed5769922ada4"
-size = 6817943
+name = "udf_v0.7.9_darwin_arm64.tar.gz"
+sha256 = "a50f75aec4c52d87f8248a0959ad6241de2b6195e37cf78d3c8619362349b06b"
+size = 7141952
 
 [udf.targets."aarch64-pc-windows-msvc"."udf"]
-name = "udf_v0.7.8_windows_arm64.zip"
-sha256 = "b174a5e2b0bf3541ffbe8cb8e9db030b840db2a1f0c8a6a3c717b784edd4136b"
-size = 6383624
+name = "udf_v0.7.9_windows_arm64.zip"
+sha256 = "a39aa4b55ec764785d09a3d34a551bbd9c01924aefde37a22b496887958bfc3a"
+size = 6689602
 
 [udf.targets."aarch64-unknown-linux-gnu"."udf"]
-name = "udf_v0.7.8_linux_arm64.tar.gz"
-sha256 = "260eb36d3d15644d3a0949a794ada70fd227cad5c4e65204206c0877dc6ac7a8"
-size = 6563663
+name = "udf_v0.7.9_linux_arm64.tar.gz"
+sha256 = "cf0a53997d37420c9c26b2def83e0b5122f08fbc37fcda356e629e78f7b54034"
+size = 6869222
 
 [udf.targets."x86_64-apple-darwin"."udf"]
-name = "udf_v0.7.8_darwin_amd64.tar.gz"
-sha256 = "f0d9e5b9f7ade6d1aacc5e55985286cd0a72f4bc0ba944b9efad44fe3f1dd9b2"
-size = 7444289
+name = "udf_v0.7.9_darwin_amd64.tar.gz"
+sha256 = "f2a3760ecd33dafa9c43382c5849ce2a1144bae2e91dac114abdd86338c5ac69"
+size = 7812557
 
 [udf.targets."x86_64-pc-windows-msvc"."udf"]
-name = "udf_v0.7.8_windows_amd64.zip"
-sha256 = "48fd0274a054c2eb810237b1e3a2f335434fde6176605a891fb5507ba8a5c77b"
-size = 7222953
+name = "udf_v0.7.9_windows_amd64.zip"
+sha256 = "47a54e96e166b95e4195de53b083e41137782ed5f8528345059d990918c2bd9c"
+size = 7578511
 
 [udf.targets."x86_64-unknown-linux-gnu"."udf"]
-name = "udf_v0.7.8_linux_amd64.tar.gz"
-sha256 = "90240d853aa87859797506a47c84a0854ed7f7ac21a65233961226164a228b73"
-size = 7324327
+name = "udf_v0.7.9_linux_amd64.tar.gz"
+sha256 = "89023800f52e44dd9910c483f9b15e1df10eafb1e4abee7ca67fa056f5fe4a47"
+size = 7681718
 
 ["vcc"]
 version = "0.1.0"

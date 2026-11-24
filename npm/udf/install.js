@@ -14,8 +14,8 @@ const ASSETS = {
   "darwin-arm64": {
     bins: {
       "udf": {
-        url: "https://github.com/ejfkdev/udf/releases/download/v0.7.8/udf_v0.7.8_darwin_arm64.tar.gz",
-        sha256: "ddb69a2ce375d0b6f3e161024b7170255d7356e485847672a79ed5769922ada4",
+        url: "https://github.com/ejfkdev/udf/releases/download/v0.7.9/udf_v0.7.9_darwin_arm64.tar.gz",
+        sha256: "a50f75aec4c52d87f8248a0959ad6241de2b6195e37cf78d3c8619362349b06b",
         archive: "tar.gz",
         member: "udf",
         env_prefix: "UDF",
@@ -25,8 +25,8 @@ const ASSETS = {
   "darwin-x64": {
     bins: {
       "udf": {
-        url: "https://github.com/ejfkdev/udf/releases/download/v0.7.8/udf_v0.7.8_darwin_amd64.tar.gz",
-        sha256: "f0d9e5b9f7ade6d1aacc5e55985286cd0a72f4bc0ba944b9efad44fe3f1dd9b2",
+        url: "https://github.com/ejfkdev/udf/releases/download/v0.7.9/udf_v0.7.9_darwin_amd64.tar.gz",
+        sha256: "f2a3760ecd33dafa9c43382c5849ce2a1144bae2e91dac114abdd86338c5ac69",
         archive: "tar.gz",
         member: "udf",
         env_prefix: "UDF",
@@ -36,8 +36,8 @@ const ASSETS = {
   "linux-arm64": {
     bins: {
       "udf": {
-        url: "https://github.com/ejfkdev/udf/releases/download/v0.7.8/udf_v0.7.8_linux_arm64.tar.gz",
-        sha256: "260eb36d3d15644d3a0949a794ada70fd227cad5c4e65204206c0877dc6ac7a8",
+        url: "https://github.com/ejfkdev/udf/releases/download/v0.7.9/udf_v0.7.9_linux_arm64.tar.gz",
+        sha256: "cf0a53997d37420c9c26b2def83e0b5122f08fbc37fcda356e629e78f7b54034",
         archive: "tar.gz",
         member: "udf",
         env_prefix: "UDF",
@@ -47,8 +47,8 @@ const ASSETS = {
   "linux-x64": {
     bins: {
       "udf": {
-        url: "https://github.com/ejfkdev/udf/releases/download/v0.7.8/udf_v0.7.8_linux_amd64.tar.gz",
-        sha256: "90240d853aa87859797506a47c84a0854ed7f7ac21a65233961226164a228b73",
+        url: "https://github.com/ejfkdev/udf/releases/download/v0.7.9/udf_v0.7.9_linux_amd64.tar.gz",
+        sha256: "89023800f52e44dd9910c483f9b15e1df10eafb1e4abee7ca67fa056f5fe4a47",
         archive: "tar.gz",
         member: "udf",
         env_prefix: "UDF",
@@ -58,8 +58,8 @@ const ASSETS = {
   "win32-arm64": {
     bins: {
       "udf": {
-        url: "https://github.com/ejfkdev/udf/releases/download/v0.7.8/udf_v0.7.8_windows_arm64.zip",
-        sha256: "b174a5e2b0bf3541ffbe8cb8e9db030b840db2a1f0c8a6a3c717b784edd4136b",
+        url: "https://github.com/ejfkdev/udf/releases/download/v0.7.9/udf_v0.7.9_windows_arm64.zip",
+        sha256: "a39aa4b55ec764785d09a3d34a551bbd9c01924aefde37a22b496887958bfc3a",
         archive: "zip",
         member: "udf.exe",
         env_prefix: "UDF",
@@ -69,8 +69,8 @@ const ASSETS = {
   "win32-x64": {
     bins: {
       "udf": {
-        url: "https://github.com/ejfkdev/udf/releases/download/v0.7.8/udf_v0.7.8_windows_amd64.zip",
-        sha256: "48fd0274a054c2eb810237b1e3a2f335434fde6176605a891fb5507ba8a5c77b",
+        url: "https://github.com/ejfkdev/udf/releases/download/v0.7.9/udf_v0.7.9_windows_amd64.zip",
+        sha256: "47a54e96e166b95e4195de53b083e41137782ed5f8528345059d990918c2bd9c",
         archive: "zip",
         member: "udf.exe",
         env_prefix: "UDF",
